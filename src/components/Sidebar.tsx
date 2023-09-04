@@ -4,7 +4,7 @@ export default function Sidebar () {
         <ul>
             <li>Post</li>
             <li>Friends</li>
-            <li>Clubs</li>
+            <li>My Clubs</li>
             <li>Studio</li>
         </ul>
         </div>
