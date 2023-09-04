@@ -1,5 +1,42 @@
+body {
+margin:0px;
+}
+
+
+
+
 .navigation  {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   border: 5px solid green;
+  list-style-type: none;
+  
 }
+
+.navigation > li {
+  margin: 6em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.searchBar {
+height:2em;
+border: 3px solid yellow;
+margin-top:auto;
+margin-bottom: auto;
+float: left;
+
+}
+
+.upperBar {
+  
+  border: 5px solid red;
+  display: flex;
+  flex-direction: row;
+  column-gap: 8em;
+  justify-content: space-between;
+  
+}
+
+
