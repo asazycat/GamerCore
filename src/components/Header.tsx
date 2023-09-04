@@ -1,7 +1,8 @@
 import SearchBar from "./SearchBar";
 import Profile from "./Profile"
 import {Link } from 'react-router-dom';
-
+import Sidebar from "./Sidebar";
+import SearchResult from "./SearchResult";
 export default function Header () {
     return (
         <>
@@ -21,7 +22,8 @@ export default function Header () {
         
         <Profile/>
         </div>
-        
+        <SearchResult/>
+        <Sidebar/>
        </>
     )
 }

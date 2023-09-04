@@ -11,13 +11,15 @@ margin:0px;
   justify-content: center;
   border: 5px solid green;
   list-style-type: none;
-  
+  width: 100%;
 }
 
 .navigation > li {
   margin: 6em;
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 1.5em;
+  
 }
 
 .searchBar {
@@ -25,7 +27,8 @@ height:2em;
 border: 3px solid yellow;
 margin-top:auto;
 margin-bottom: auto;
-float: left;
+
+text-align: left;
 
 }
 
@@ -34,9 +37,49 @@ float: left;
   border: 5px solid red;
   display: flex;
   flex-direction: row;
-  column-gap: 8em;
+  column-gap: 6em;
   justify-content: space-between;
+  position: relative;
   
 }
 
+
+.format {
+  
+  border: 5px solid blue;
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5em;
+  line-height: 50em;
+}
+
+.userProfile {
+border: 2px solid black;
+}
+
+
+.sidebar  {
+  
+ border: 5px solid orange;
+float: right;
+width: 20%;
+height:75em;
+text-align: left;
+}
+
+.sidebar > ul {
+list-style-type: none;
+font-size: 1.5em;
+line-height: 5em;
+margin-top: 5em;
+}
+
+.searchResult {
+border: 5px solid purple;
+float: left;
+width: 20%;
+height:75em;
+
+}
 

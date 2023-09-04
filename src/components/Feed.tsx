@@ -1,6 +1,6 @@
 export default function Feed () {
 
     return (
-        <h1>Feed</h1>
+        <div className="format"><p>Feed</p></div>
     )
 }

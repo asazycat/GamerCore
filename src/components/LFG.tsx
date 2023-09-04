@@ -1,5 +1,5 @@
 export default function LFG () {
     return (
-        <h1>LFG</h1>
+        <div className="format"><p>LFG</p></div>
     )
 }
