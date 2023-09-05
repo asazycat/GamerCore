@@ -108,12 +108,35 @@ height:75em;
   text-align: center;
   border: 5px solid brown;
   padding: 2em;
+  
 }
 
 
 .eachFeed {
   border: 5px solid grey;
+  margin-top: 5%;
   
 }
 
+.userPost   {
+  text-align: left;
+  border: 1px solid grey;
+ 
+}
 
+.postContent {
+  
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.votes {
+  text-align: left;
+  border: 1px solid grey;
+}
+
+.date {
+  text-align: right;
+border:1px solid grey;
+}

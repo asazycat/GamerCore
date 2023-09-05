@@ -13,7 +13,10 @@ export default function EachFeed (props:{
     const {eachFeed} = props
     return (
         <li><div className="eachFeed">
-            <p>cc</p>
-            {eachFeed.user}</div></li>
+            <p className="userPost">{eachFeed.user}</p>
+            <p className="postContent">{eachFeed.post_content}</p>
+            <p className="votes">{eachFeed.votes}</p>
+            <p className="date">{eachFeed.date}</p>
+            </div></li>
     )
 }
