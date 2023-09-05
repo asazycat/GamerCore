@@ -1,9 +1,9 @@
 
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
-import Header from './components/Header'
-import Feed from './components/Feed'
-import LFG from './components/LFG'
+import Header from '../components/Header'
+import Feed from '../components/Feed'
+import LFG from '../components/LFG'
 
 function App() {
  
