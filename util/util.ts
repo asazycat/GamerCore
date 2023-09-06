@@ -28,3 +28,32 @@ export function sortByMap (arr1: {
     }
     return newArray
     }
+
+
+
+    export function findUser (arr1: {user_id: 1,
+        username: string ,
+        img_url: string,
+        bio: string,
+        first_name: string,
+        last_name: string,
+        email: string,
+        followers_count: number,
+        following_count: number } [], searchTerm:string) {
+            if (searchTerm === '') {return []}
+            const array = [...arr1]
+              return array.filter((eachUser) => {
+                const regex = `^${searchTerm}`
+                const newRegex = new RegExp (regex, 'gmi')
+                console.log(regex)
+                if (newRegex.test(eachUser.username)){
+                    console.log(eachUser)
+                    return eachUser
+                }
+                else {
+                    console.log('not there')
+                }
+               })
+
+            
+        }
