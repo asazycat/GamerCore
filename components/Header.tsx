@@ -3,13 +3,20 @@ import Profile from "./Profile"
 import {Link } from 'react-router-dom';
 import Sidebar from "./Sidebar";
 import SearchResult from "./SearchResult";
+import { useState } from 'react';
+
 export default function Header () {
+    const [searchTerm, setSearchTerm] = useState('')
+    const handleSearchTerm = (term: string) => {
+        setSearchTerm(term)
+    }
+    console.log(searchTerm)
     return (
         <>
         
         <div className="upperBar">
            
-        <SearchBar/>
+        <SearchBar searchTerm={searchTerm} setSearchTerm={handleSearchTerm}/>
           
             <ul className="navigation">
           
@@ -22,8 +29,10 @@ export default function Header () {
         
         <Profile/>
         </div>
-        <SearchResult/>
+        <SearchResult searchTerm={searchTerm}/>
         <Sidebar/>
        </>
+       
     )
+    
 }
