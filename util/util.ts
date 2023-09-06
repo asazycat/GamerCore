@@ -31,7 +31,8 @@ export function sortByMap (arr1: {
 
 
 
-    export function findUser (arr1: {user_id: 1,
+    export function findUser (arr1: {
+        user_id: number,
         username: string ,
         img_url: string,
         bio: string,

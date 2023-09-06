@@ -81,6 +81,7 @@ float: left;
 width: 20%;
 height:75em;
 
+
 }
 
 .selectBoxes {
@@ -152,4 +153,40 @@ border:1px solid grey;
 
 .comment_amount {
   text-align: left;
+}
+
+.searchResult > ul {
+  
+  list-style-type: none;
+  
+  width:15em;
+}
+
+
+.eachSearch {
+  border: 2px solid navy;
+  text-align: left;
+  width: 20em;
+  padding:0.5em;
+  margin-top: 2em;
+}
+
+.searchImg {
+  
+  border:1px solid black;
+  border-radius: 5em;
+  
+}
+
+.searchUsername {
+  font-size: 1.5em;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1em;;
+}
+.bio {
+  text-align: center;
 }

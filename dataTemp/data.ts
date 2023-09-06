@@ -78,6 +78,18 @@ export const users = [
     bio: "I blame Anon",
     followers_count: 300,
     following_count: 300,
+  },
+
+  {
+    user_id: 4,
+    username: "AsazyCat",
+    img_url: "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQ5pAUkFjASncLgVEsqVbwyTj0LP1ObO85jakWZEibYYmjHzzQux9-C1zQ2DXiZnAldF_l5_EXyZXQqQf4",
+    bio: "Just your old and not so interesting AsazyCat",
+    first_name: "Asad",
+    last_name: "Jawaid",
+    email: "asazycat@gmail.com",
+    followers_count:420,
+    following_count: 69,
   }
 ]
 
