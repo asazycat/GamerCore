@@ -54,8 +54,8 @@ export const users = [
     first_name: "Pizza",
     last_name: "Box",
     email: "",
-    followers_count:420,
-    following_count: 69,
+    followers: [2,3,4],
+    following: [2,3,4],
   },
   {
     user_id: 2,
@@ -65,8 +65,8 @@ export const users = [
     last_name: "Box",
     email: "",
     bio: "Author of 'Book of Mothology'. Creepy satanic witch",
-    followers_count: 2000,
-    following_count: 5,
+    followers: [1,3],
+    following: [1,3],
   },
   {
     user_id: 3,
@@ -76,8 +76,8 @@ export const users = [
     last_name: "Box",
     email: "",
     bio: "I blame Anon",
-    followers_count: 300,
-    following_count: 300,
+    followers: [2,4],
+    following: [2,4],
   },
 
   {
@@ -88,8 +88,8 @@ export const users = [
     first_name: "Asad",
     last_name: "Jawaid",
     email: "asazycat@gmail.com",
-    followers_count:420,
-    following_count: 69,
+    followers:[2,3,1],
+    following: [3],
   }
 ]
 
