@@ -3,7 +3,7 @@ export default function Sidebar () {
         <div className="sidebar">
         <ul>
             <li>Inbox</li>
-            <li>Friends</li>
+            <li>Follwers</li>
             <li>My Clubs</li>
             <li>Studio</li>
         </ul>
