@@ -1,9 +1,13 @@
+import { useState } from "react"
 import {discussionPosts} from "../dataTemp/data"
 import EachFeed from "./EachFeed"
+import {sortByMap} from "../util/util"
+
 
 
 export default function Feed () {
 
+    const [selectedSortBy, setselectedSortBy] = useState("")
     
     return (
         <div className="format">
@@ -12,9 +16,10 @@ export default function Feed () {
             <div className="sortBy">
             <label>
                 Sort By:
-                <select name="sortBy" defaultValue="">
+                <select name="sortBy" value={selectedSortBy} onChange={e=> setselectedSortBy(e.target.value)}>
+                <option value="" ></option>
                     <option value="popularity" >Popularity</option>
-                    <option value="dateOfupload" >Date Of Upload</option>  
+                    <option value="commentAmount" >Most Commented</option>  
                 </select>
             </label>
             </div>
@@ -23,14 +28,19 @@ export default function Feed () {
             <label>
                 Filter:
                 <select name="filter" defaultValue="">
-                    <option value="platform" >Platform</option>
+                    <option value="" ></option>
                     <option value="following" >Following</option>
+                    <option value="voted" >Upvoted</option>
                 </select>
             </label>
             </div>
             </div>
 
-            <div className="feedList">{discussionPosts.map((eachFeed:{
+             
+
+            <div className="feedList">
+            {
+            sortByMap(discussionPosts, selectedSortBy).map((eachFeed:{
                 discussion_id: number,
                 user: string,
                 post_title: string,
@@ -38,11 +48,9 @@ export default function Feed () {
                 votes: number,
                 comment_amount: number,
                 date: string
-            }) => {return <EachFeed eachFeed={eachFeed} />})}</div>
-
-
-
-
-        </div>
-    )
-}
+            }) => {return <EachFeed eachFeed={eachFeed} key={eachFeed.discussion_id}/>
+            } )}
+            </div>
+         </div>
+    )}
+    
