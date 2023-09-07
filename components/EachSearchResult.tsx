@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function EachSearchResult(props: {searchResult: {
     user_id: number,
     username: string,
@@ -6,21 +8,23 @@ export default function EachSearchResult(props: {searchResult: {
     first_name: string,
     last_name:string ,
     email: string ,
-    followers_count:number,
-    following_count: number,}}) {
+    followers:number[],
+    following: number[],}}) {
     const {searchResult} = props
     return (
         <li>
+             <Link to ={`/${searchResult.user_id}`} >
         <div className="eachSearch">
-
+       
 
          <div className="top">
         <img src={searchResult.img_url} alt={searchResult.username} height="75" width="75" className="searchImg"/>
         <p className="searchUsername">{searchResult.username}</p>
         </div>
         <p className="bio">{searchResult.bio}</p> 
-        </div>
         
+        </div>
+        </Link>
         </li>    )
 
 

@@ -39,8 +39,8 @@ export function sortByMap (arr1: {
         first_name: string,
         last_name: string,
         email: string,
-        followers_count: number,
-        following_count: number } [], searchTerm:string) {
+        followers: number[],
+        following: number[] } [], searchTerm:string) {
             if (searchTerm === '') {return []}
             const array = [...arr1]
               return array.filter((eachUser) => {
