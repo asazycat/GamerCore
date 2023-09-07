@@ -58,3 +58,12 @@ export function sortByMap (arr1: {
 
             
         }
+
+
+
+
+export function checkPassword (arr1: {"username": string, "password": string}[],obj: {username: string, password: string}) {
+       console.log(arr1, obj)
+       return true
+
+}
