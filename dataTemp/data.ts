@@ -93,3 +93,23 @@ export const users = [
   }
 ]
 
+
+
+
+export const LoginProfiles = [
+  {
+    user_id: 4,
+    username: "AsazyCat",
+    password: "MOMO6270"
+  },
+  {
+    user_id: 2,
+    username: "X MadaMadam X",
+    password: 'GROUNDED'
+  },
+  {
+    user_id: 3,
+    username: "Anon Psycho",
+    password: "IBlameAnon"
+  },
+]

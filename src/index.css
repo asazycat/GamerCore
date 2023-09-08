@@ -37,7 +37,7 @@ text-align: left;
   border: 5px solid red;
   display: flex;
   flex-direction: row;
-  column-gap: 6em;
+  column-gap: 2em;
   justify-content: space-between;
   position: relative;
   
@@ -55,6 +55,7 @@ text-align: left;
 }
 
 .userProfile {
+  display: flex;
 border: 2px solid black;
 }
 
@@ -226,4 +227,43 @@ border:1px solid grey;
 .pageProfile {
   border: 1px solid black;
   border-radius: 15em;
+}
+
+
+.proImg {
+  
+}
+
+
+
+.login > form {
+  
+  display:flex;
+  flex-direction: column;
+  width: 10em;
+  padding:5em;
+  font-size:3em;
+  float:right;
+  background-color: rgb(8, 105, 8);
+  color:whitesmoke;
+
+}
+
+.login {
+  display:flex;
+  flex-direction: row;
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  border: 5px solid green;
+  width:100%;
+  line-height:10em;
+ 
+}
+
+
+.gamerCore {
+  width:100%;
 }
