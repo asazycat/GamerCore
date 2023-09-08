@@ -4,6 +4,7 @@ import { LoginContext } from '../context/LoginContext';
 import { useContext, useState } from 'react';
 import { checkPassword } from '../util/util';
 import { LoginProfiles } from '../dataTemp/data';
+ 
 export default function Login (props) {
 
         const {user, setUser} = useContext(LoginContext)
@@ -34,17 +35,20 @@ export default function Login (props) {
 
        return (
         <div className="login">
+            <img src="../images/gamerCore.jpg" className="gamerCore"/>
             <form onSubmit={handleSubmit}>
                 <label>
                     Username:
                 </label>
-                <input value='username' onChange={(e) => {setUsername(e.target.value)}}/> 
+                <input  onChange={(e) => {setUsername(e.target.value)}}/> 
 
                 <label>
                     Password
                 </label>
-                <input type="password" value='pasword' onChange={(e) => {setPassword(e.target.value)}}/> 
-              <button type="submit">Login</button>
+
+                
+                <input type="password" onChange={(e) => {setPassword(e.target.value)}}/> 
+                <label><button type="submit">Login</button></label>
             </form>
         </div>
        )
