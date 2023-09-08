@@ -18,11 +18,12 @@ export default function Login (props) {
 
 
         const handleSubmit = (e: { preventDefault: () => void; }) => {
-
+           
             user.username = username
             user.password = password
 
             if (checkPassword(LoginProfiles, user)) {
+                
                 setUser(user)
                 setLogin(true)
             }
