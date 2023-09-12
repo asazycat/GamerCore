@@ -9,64 +9,82 @@ margin:0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: 5px solid green;
+  border: 3px solid #893899;
   list-style-type: none;
-  width: 100%;
+  position: relative;
+  border-radius: 2em;
+  background-color: #354c7e
 }
 
 .navigation > li {
-  margin: 6em;
+  margin: 2em;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1.5em;
-  
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:azure
 }
 
 .searchBar {
-height:2em;
-border: 3px solid yellow;
+
+border: 1px solid yellow;
 margin-top:auto;
 margin-bottom: auto;
-
+border-radius: 5em;
+margin-left: 0.5%;
+padding:0.5em;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 text-align: left;
-
+border: 3px solid #893899;
+background-color: #354c7e;
+color:azure;
 }
 
 .upperBar {
   
-  border: 5px solid red;
+ 
   display: flex;
   flex-direction: row;
-  column-gap: 2em;
   justify-content: space-between;
-  position: relative;
+  background-color:#7e3972;
+  border: 5px solid #7e3972;
   
+ 
 }
 
 
 .format {
   
   border: 5px solid blue;
-  max-width: 50em;
+  max-width: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5em;
+  margin-top: 0;
   padding:2em;
+height:50em;
+
 }
 
 .userProfile {
   display: flex;
-border: 2px solid black;
+  background-color:#944aa3;
+ column-gap: 1em;
+ padding-left: 1em ;
+ padding-right: 1em;
+ border:2px solid #944aa3;
+ border-radius: 2em;
+
 }
 
 
 .sidebar  {
   
- border: 5px solid orange;
+  color:azure;
 float: right;
 width: 20%;
 height:75em;
 text-align: left;
+background-color: #7e3972;
 }
 
 .sidebar > ul {
@@ -74,14 +92,15 @@ list-style-type: none;
 font-size: 1.5em;
 line-height: 5em;
 margin-top: 5em;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .searchResult {
-border: 5px solid purple;
+
 float: left;
 width: 20%;
 height:75em;
-
+background-color: #7e3972;
 
 }
 
@@ -165,11 +184,13 @@ border:1px solid grey;
 
 
 .eachSearch {
-  border: 2px solid navy;
+  background-color: #354c7e;
+  border: 1px solid  #354c7e;
   text-align: left;
- 
+  border-radius: 2em;
   padding:0.5em;
   margin-top: 2em;
+  margin-left: -10%;
 }
 
 .searchImg {
@@ -200,8 +221,8 @@ border:1px solid grey;
   border:5px solid darkgreen;
   border-radius:4em ;
   padding:2em;
-  width:40%;
-  height:20em;
+  width:50%;
+  
   
 }
 .userBioImg {
@@ -231,39 +252,100 @@ border:1px solid grey;
 
 
 .proImg {
-  
+  height:3em;
+   width:3em;
+   border-radius: 5em;
+   margin-top: auto;
+   margin-bottom: auto;
 }
 
 
 
 .login > form {
   
-  display:flex;
+ 
+  display: flex;
   flex-direction: column;
-  width: 10em;
-  padding:5em;
-  font-size:3em;
-  float:right;
+ text-align: center;
+ justify-content: center;
   background-color: rgb(8, 105, 8);
   color:whitesmoke;
-
-}
+ 
+  
+} 
 
 .login {
-  display:flex;
-  flex-direction: row;
-  position: fixed; /* or absolute */
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
-  border: 5px solid green;
-  width:100%;
-  line-height:10em;
- 
+
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
 }
 
 
-.gamerCore {
-  width:100%;
+.bg-apply {
+  background-image:url("../images/gaming.jpg") "no-repeat";
+}
+
+
+
+
+.postButton {
+  
+  margin-left: auto;
+  margin-right: auto;
+  
+  border:5px solid red;
+  
+  width:50%;
+  margin-top:5%;
+  padding: 2em;
+}
+
+.postButton > button {
+  
+  
+}
+
+.postType {
+  display: flex;
+  flex-direction: row;
+  column-gap: 50%;
+  justify-content: center;
+}
+
+
+.postForm {
+  text-align: center;
+  border: 5px solid red;
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:5%;
+  padding:2em;
+}
+
+
+.discussionForm > form {
+  border: 5px solid blue;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding:2em;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  color:azure;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #dbb75a;
 }

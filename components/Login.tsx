@@ -4,9 +4,11 @@ import { LoginContext } from '../context/LoginContext';
 import { useContext, useState } from 'react';
 import { checkPassword } from '../util/util';
 import { LoginProfiles } from '../dataTemp/data';
- 
-export default function Login (props) {
+import image from '../images/gaming.jpg'
 
+
+export default function Login (props) {
+    console.log(image)
         const {user, setUser} = useContext(LoginContext)
         
         const [username, setUsername] = useState('')
@@ -28,15 +30,17 @@ export default function Login (props) {
                 setLogin(true)
             }
             else {
-                console.log("password doesn't match" )
+                alert("password doesn't match" )
             }
             e.preventDefault()
            
         }
 
        return (
+         <div className='bg-apply'>
+            <img src={`${image}`} />
         <div className="login">
-            <img src="../images/gamerCore.jpg" className="gamerCore"/>
+           
             <form onSubmit={handleSubmit}>
                 <label>
                     Username:
@@ -51,6 +55,7 @@ export default function Login (props) {
                 <input type="password" onChange={(e) => {setPassword(e.target.value)}}/> 
                 <label><button type="submit">Login</button></label>
             </form>
+        </div>
         </div>
        )
 

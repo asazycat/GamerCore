@@ -3,13 +3,15 @@ import {discussionPosts} from "../dataTemp/data"
 import EachFeed from "./EachFeed"
 import {sortByMap} from "../util/util"
 
-
+import { Link } from "react-router-dom"
 
 export default function Feed () {
 
     const [selectedSortBy, setselectedSortBy] = useState("")
     
     return (
+        <>
+        <div className="postButton"><label><Link to="/post"><button >Share</button></Link></label></div>
         <div className="format">
 
             <div className="selectBoxes">
@@ -31,10 +33,13 @@ export default function Feed () {
                     <option value="" ></option>
                     <option value="following" >Following</option>
                     <option value="voted" >Upvoted</option>
+                    <option value="voted" >Video/Img</option>
+                    <option value="voted" >Discussion</option>
                 </select>
             </label>
             </div>
             </div>
+            
 
              
 
@@ -52,5 +57,6 @@ export default function Feed () {
             } )}
             </div>
          </div>
+         </>
     )}
     
