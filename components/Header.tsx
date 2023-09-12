@@ -5,7 +5,8 @@ import Sidebar from "./Sidebar";
 import SearchResult from "./SearchResult";
 import { useState } from 'react';
 
-export default function Header () {
+export default function Header (props) {
+    const {setLogin} = props
     const [searchTerm, setSearchTerm] = useState('')
     const handleSearchTerm = (term: string) => {
         setSearchTerm(term)
@@ -27,7 +28,7 @@ export default function Header () {
                 
             </ul>
         
-        <Profile/>
+        <Profile setLogin={setLogin}/>
         </div>
         <SearchResult searchTerm={searchTerm}/>
         <Sidebar/>

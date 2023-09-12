@@ -15,7 +15,7 @@
       post_content:"The new changes to villager trading mechanics has put more depth into trading which I think is better than how it is right now",
       votes: 5,
       comment_amount: 4,
-      date: '15-9-23'
+      date: '01-9-23'
     },
     {
       discussion_id: 3,
@@ -59,7 +59,7 @@ export const users = [
   },
   {
     user_id: 2,
-    username: "X MadaMadam X",
+    username: "XMadaMadamX",
     img_url: "../images/madmadam.jpg",
     first_name: "Cheerio",
     last_name: "Box",

@@ -8,6 +8,7 @@ import User from '../components/User'
 import { useState } from 'react';
 
 import Login from '../components/Login.tsx'
+import Post from '../components/Post.tsx'
 function App() {
  
  const [login, setLogin] = useState(false)
@@ -16,14 +17,17 @@ function App() {
     }
     else
 return (
-   <section>
-   <Header/> 
+   <div>
+   <Header setlogin={setLogin}/> 
+   
   <Routes>
   <Route path="/feed" element={<Feed />} />
   <Route path="/LFG" element={<LFG />} />
   <Route path="/:user_id" element={<User />} />
+  <Route path="/post" element={<Post/>} />
   </Routes>
-   </section>
+
+   </div >
   )
 
 }
