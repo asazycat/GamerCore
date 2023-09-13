@@ -23,7 +23,7 @@ export default function EachFeed (props:{
             <p className="votes">{eachFeed.votes} Upvote</p>
            
             <p className="date">{eachFeed.date}</p>
-            <p className="comment_amount">Number of comments {eachFeed.comment_amount}</p>
+            <p className="comment_amount">Comments: {eachFeed.comment_amount}</p>
             </div></li>
     )
 }
