@@ -21,7 +21,7 @@ export default function EachSearchResult(props: {searchResult: {
         <img src={searchResult.img_url} alt={searchResult.username} height="75" width="75" className="searchImg"/>
         <p className="searchUsername">{searchResult.username}</p>
         </div>
-        <p className="bio">{searchResult.bio}</p> 
+         
         
         </div>
         </Link>

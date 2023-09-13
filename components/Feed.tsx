@@ -11,7 +11,7 @@ export default function Feed () {
     
     return (
         <>
-        <div className="postButton"><label><Link to="/post"><button >Share</button></Link></label></div>
+        <div className="postButton"><label><Link to="/post"><button className="share" >Share</button></Link></label></div>
         <div className="format">
 
             <div className="selectBoxes">
