@@ -29,8 +29,21 @@ const [feed, setFeed] = useState<IFeed[]>([])
             const colRef = collection(db, 'feed')
 
             const snapshot = await getDocs(colRef)
-            const docs = snapshot.docs.map(doc => {return { Feed_Id: doc.id, ...doc.data()}})
- 
+          
+            const docs = snapshot.docs.map(doc => {
+                const info = doc.data()
+                return { 
+                Feed_Id: doc.id, 
+                user: info.user,
+                post_title: info.title,
+                post_content: info.post_content,
+                votes: info.votes,
+                comment_amount: info.comment_amount,
+                date: info.date,
+                media_type: info.media_type
+            }
+        })
+            
             setFeed(docs)
         }) ()
         

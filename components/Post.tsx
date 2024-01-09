@@ -1,10 +1,11 @@
- import {ChangeEvent, useState} from 'react'
+ import {MouseEvent, useState} from 'react'
 import PostType from './PostType'
 export default function Post () {
    const [active, setActive] = useState('discussion')
    
-    function postValue (e: ChangeEvent<HTMLInputElement>) {
-        setActive(e.target.value)
+    function postValue (e: MouseEvent<HTMLButtonElement>) {
+        const value = e.target as HTMLButtonElement
+        setActive(value.value)
     }
 
     return (
