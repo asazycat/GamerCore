@@ -1,4 +1,4 @@
-import {useState,useContext,useEffect} from 'react'
+import {useState,useContext,useEffect, FormEvent} from 'react'
 
 
 
@@ -16,7 +16,7 @@ export default function PostType (props: {active: string}) {
    const [media, setMedia] = useState('')
     const [text, setText] = useState('')
     const [title, setTitle] = useState('')
-    const [user, setUser] = useState({})
+    const [user, setUser] = useState({username:''})
         const addDate = new Date()
         const theDate = addDate.toDateString()
 
@@ -30,8 +30,11 @@ export default function PostType (props: {active: string}) {
             if (doc.exists()) {
                 console.log('exists ')
                 const data  = doc.data()
-                setUser(data)
-                console.log("Document data:", doc.data());
+                const doctoObj = {
+                    username: data.username
+                }
+                setUser(doctoObj)
+              
               } else {
                
                 console.log("No such document!");
@@ -40,7 +43,7 @@ export default function PostType (props: {active: string}) {
         })
         
         ,[])
-     const handleSubmit =  async (e) => {
+     const handleSubmit =  async (e: FormEvent<HTMLFormElement>) => {
            
         e.preventDefault()
         if (active === 'discussionForm') {
