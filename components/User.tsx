@@ -51,7 +51,7 @@ export default function User () {
           })
 })
 
-,[])
+,[id, user_id])
      
 
    

@@ -48,7 +48,7 @@ useEffect((()=> {
         console.log("No such document!");
       }
           })
-}),[])
+}),[loginInitials.id])
 
 
 return (

@@ -32,7 +32,7 @@ export default function Login (props: {login: boolean, setLogin: Dispatch<SetSta
             }
         })      
 
-    },[])
+    },[auth, loginInitials, setLogin])
    
         
        

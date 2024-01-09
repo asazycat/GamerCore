@@ -42,7 +42,7 @@ export default function PostType (props: {active: string}) {
                   })
         })
         
-        ,[])
+        ,[loginInitials.id])
      const handleSubmit =  async (e: FormEvent<HTMLFormElement>) => {
            
         e.preventDefault()

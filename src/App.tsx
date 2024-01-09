@@ -13,7 +13,7 @@ import Post from '../components/Post.tsx'
 function App() {
  
  const [login, setLogin] = useState(false)
- const [id, setId ] = useState('')
+
     if (login ===false) {
       return (<Login login={login} setLogin={setLogin}/>)
     }
