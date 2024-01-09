@@ -13,6 +13,7 @@ import Post from '../components/Post.tsx'
 function App() {
  
  const [login, setLogin] = useState(false)
+ const [id, setId ] = useState('')
     if (login ===false) {
       return (<Login login={login} setLogin={setLogin}/>)
     }
@@ -24,7 +25,7 @@ return (
   <Routes>
   <Route path="/feed" element={<Feed />} />
   <Route path="/LFG" element={<LFG />} />
-  <Route path="/:user_id" element={<User />} />
+  <Route path=":user_id" element={<User/>} />
   <Route path="/post" element={<Post/>} />
   </Routes>
 

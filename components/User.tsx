@@ -1,34 +1,49 @@
 import { useParams } from "react-router-dom"
 
-import { useContext, useEffect, useState } from "react"
+import {  useContext, useEffect, useState } from "react"
 import { LoginContext } from "../context/LoginContext"
 import { doc, getDoc } from "firebase/firestore";
 import db from "../src/firebase"
+
+
+
+
 export default function User () {
 
     const {loginInitials} = useContext(LoginContext)
     const {user_id} = useParams()
-  
+   const [id, setId] = useState(loginInitials.id)
     const [user, setUser] = useState({
         bio:'',
-        first_name:'',
-        last_name:'',
+      
         followers:[],
         following:[],
         img_url:'',
         username:''
     })
-    console.log(user_id)
+
     useEffect((()=> {
-       
-    
-    const docRef = doc(db, "users", user_id);
+      
+        if (user_id === undefined) {
+            setId('loginInitials.id')
+        } else
+        {setId(user_id)}  
+      
+
+    const docRef = doc(db, "users", id);
     getDoc(docRef).then((doc)=> {
     if (doc.exists()) {
-        console.log('exists ')
+      
         const data  = doc.data()
-        setUser(data)
-        console.log("Document data:", doc.data());
+        const obj = {
+            bio: data.bio,
+            username: data.username,
+            followers: data.followers,
+            following: data.following,
+            img_url: data.img_url
+        }
+        setUser(obj)
+       
       } else {
        
         console.log("No such document!");
