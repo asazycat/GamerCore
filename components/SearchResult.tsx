@@ -5,7 +5,7 @@ import { getDocs, collection } from "firebase/firestore"
 import db from "../src/firebase"
 
 interface IUsers {
-    user_id: number,
+    user_id: string,
     username: string ,
     img_url: string,
     bio: string,
@@ -14,7 +14,7 @@ interface IUsers {
     email: string,
     followers: number[],
     following: number[]
-    password:string
+  
 }
 
 export default function SearchResult(props: {searchTerm: string}) {
@@ -26,7 +26,21 @@ export default function SearchResult(props: {searchTerm: string}) {
             const colRef = collection(db, 'users')
 
             const snapshot = await getDocs(colRef)
-            const docs = snapshot.docs.map(doc => {return { user_id: doc.id, ...doc.data()}})
+            const docs = snapshot.docs.map(doc => {
+                
+                const info = doc.data()
+                return { 
+                    user_id: doc.id,
+                    username: info.username ,
+                    img_url: info.img_url,
+                    bio: info.bio,
+                    first_name: info.first_name,
+                    last_name: info.last_name,
+                    email: info.email,
+                    followers: info.followers,
+                    following: info.following,
+                    
+            }})
  
             setUsers(docs)
         }) ()

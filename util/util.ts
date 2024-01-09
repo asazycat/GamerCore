@@ -43,7 +43,7 @@ export function sortByMap (arr1: {
         email: string,
         followers: number[],
         following: number[]
-        password:string
+        
     } [], searchTerm:string) {
             if (searchTerm === '') {return []}
             const array = [...arr1]

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 export default function EachSearchResult(props: {searchResult: {
-    user_id: number,
+    user_id: string,
     username: string,
     img_url: string,
     bio: string,
