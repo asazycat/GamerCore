@@ -7,7 +7,10 @@ import { Link } from "react-router-dom"
 import { doc, getDoc } from "firebase/firestore";
 import db from "../src/firebase"
 
-
+interface IProfile {
+    username: string,
+    img_url: string
+}
 
 export default function Profile ()
 {     
@@ -16,7 +19,7 @@ export default function Profile ()
    
     const {loginInitials} = useContext(LoginContext)
   
-    const [profile, setProfile] = useState({
+    const [profile, setProfile] = useState<IProfile>({
         username:'',
         img_url:''})
     function signingOut () {
@@ -35,8 +38,11 @@ useEffect((()=> {
     if (doc.exists()) {
         
         const pro = doc.data()
-      
-        setProfile(pro)
+        const profileDetails = {
+            username: pro.username,
+            img_url: pro.img_url
+        }
+        setProfile(profileDetails)
       } else {
         // docSnap.data() will be undefined in this case
         console.log("No such document!");
