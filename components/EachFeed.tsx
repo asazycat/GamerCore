@@ -1,12 +1,13 @@
 export default function EachFeed (props:{
     eachFeed: { 
-    discussion_id: number,
+    Feed_Id: string,
     user: string,
     post_title: string,
     post_content: string,
     votes: number ,
     comment_amount: number,
-    date: string
+    date: string,
+    media_type:string
 },
  
 }) 
@@ -14,6 +15,7 @@ export default function EachFeed (props:{
 
     const {eachFeed} = props
     
+
    
     return (
         <li><div className="eachFeed">

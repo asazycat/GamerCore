@@ -1,9 +1,13 @@
-import { createContext,useState } from 'react';
+import { Dispatch, SetStateAction, createContext,useState } from 'react';
 
 
 export type UserContextType = {
-    user:  any,
-    setUser:any
+  loginInitials: {
+      id:string,
+      email: string,
+      password: string
+    } ,
+    setLoginInitials: (Dispatch<SetStateAction<{ id:string, email: string; password: string; }>>) 
 }
 
 
@@ -16,12 +20,16 @@ export const LoginContext = createContext({} as UserContextType)
 
 export const LoginContextProvider = ({ children }: LoginContextProviderType) => {
   
-  const [user, setUser] = useState({})
+  const [loginInitials, setLoginInitials] = useState({
+    id:"",
+    email: "",
+    password:""
+  })
   
    
         
   return (
-    <LoginContext.Provider value={{user, setUser}}>
+    <LoginContext.Provider value={{loginInitials, setLoginInitials}}>
       {children}
     </LoginContext.Provider>
   );

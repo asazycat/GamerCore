@@ -1,39 +1,67 @@
 
-
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged   } from "firebase/auth";
 import { LoginContext } from '../context/LoginContext';
-import { useContext, useState } from 'react';
-import { checkPassword } from '../util/util';
-import { LoginProfiles } from '../dataTemp/data';
+import { useContext, useState, useEffect, Dispatch, SetStateAction,  } from 'react';
+
+
 import image from '../images/gaming.jpg'
 
 
-export default function Login (props) {
-    console.log(image)
-        const {user, setUser} = useContext(LoginContext)
-        
-        const [username, setUsername] = useState('')
+export default function Login (props: {login: boolean, setLogin: Dispatch<SetStateAction<boolean>>}) {
+
+    const {loginInitials, setLoginInitials} = useContext(LoginContext)
+        const {setLogin} = props
+        const [email, setEmail] = useState('')
         const [password, setPassword] = useState('')
+        
+        const auth = getAuth()
+       
+        
+        
+        
+    useEffect(()=> {
+      
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+              loginInitials.id = user.uid
+             setLogin(true)
+            } else {
+           
+             console.log('out log')
+             setLogin(false)
+            }
+        })      
+
+    },[])
+   
+        
        
 
-        const {setLogin} = props
+       
 
 
 
         const handleSubmit = (e: { preventDefault: () => void; }) => {
-           
-            user.username = username
-            user.password = password
 
-            if (checkPassword(LoginProfiles, user)) {
-                
-                setUser(user)
-                setLogin(true)
-            }
-            else {
-                alert("password doesn't match" )
-            }
-            e.preventDefault()
-           
+           e.preventDefault()
+      
+        
+           signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            loginInitials.id = user.uid
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(`${errorCode} + ${errorMessage}`)
+          });
+            
+            loginInitials.email = email
+            loginInitials.password = password
+            setLoginInitials(loginInitials)
+
+            
         }
 
        return (
@@ -43,9 +71,9 @@ export default function Login (props) {
            
             <form onSubmit={handleSubmit}>
                 <label>
-                    Username:
+                    Email
                 </label>
-                <input  onChange={(e) => {setUsername(e.target.value)}}/> 
+                <input  onChange={(e) => {setEmail(e.target.value)}}/> 
 
                 <label>
                     Password

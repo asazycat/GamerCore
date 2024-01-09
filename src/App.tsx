@@ -1,5 +1,6 @@
 
 import { Routes, Route } from 'react-router-dom'
+
 import './App.css'
 import Header from '../components/Header'
 import Feed from '../components/Feed'
@@ -18,7 +19,7 @@ function App() {
     else
 return (
    <div>
-   <Header setlogin={setLogin}/> 
+   <Header/> 
    
   <Routes>
   <Route path="/feed" element={<Feed />} />

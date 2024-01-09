@@ -1,9 +1,9 @@
-import {useState} from 'react'
+ import {ChangeEvent, useState} from 'react'
 import PostType from './PostType'
 export default function Post () {
-   const [active, setActive] = useState('video/img')
+   const [active, setActive] = useState('discussion')
    
-    function postValue (e) {
+    function postValue (e: ChangeEvent<HTMLInputElement>) {
         setActive(e.target.value)
     }
 

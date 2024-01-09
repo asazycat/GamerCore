@@ -1,13 +1,50 @@
-import { useState } from "react"
-import {discussionPosts} from "../dataTemp/data"
+import { useEffect, useState } from "react"
+
 import EachFeed from "./EachFeed"
 import {sortByMap} from "../util/util"
-
+import db from "../src/firebase"
 import { Link } from "react-router-dom"
+import { getDocs, collection } from "firebase/firestore"
+
+interface IFeed  {
+    Feed_Id: string,
+    user: string,
+    post_title: string,
+    post_content: string,
+    votes: number,
+    comment_amount: number,
+    date: string,
+    media_type: string;
+}
+
+
 
 export default function Feed () {
-
+    
     const [selectedSortBy, setselectedSortBy] = useState("")
+const [feed, setFeed] = useState<IFeed[]>([])
+
+    useEffect(()=> {
+        (async () => {
+            const colRef = collection(db, 'feed')
+
+            const snapshot = await getDocs(colRef)
+            const docs = snapshot.docs.map(doc => {return { Feed_Id: doc.id, ...doc.data()}})
+ 
+            setFeed(docs)
+        }) ()
+        
+    },[])
+      
+      
+      
+      
+    
+       
+   
+    
+
+   
     
     return (
         <>
@@ -45,18 +82,23 @@ export default function Feed () {
 
             <div className="feedList">
             {
-            sortByMap(discussionPosts, selectedSortBy).map((eachFeed:{
-                discussion_id: number,
+            sortByMap(feed, selectedSortBy).map((eachFeed:{
+                Feed_Id: string,
                 user: string,
                 post_title: string,
                 post_content: string,
                 votes: number,
                 comment_amount: number,
-                date: string
-            }) => {return <EachFeed eachFeed={eachFeed} key={eachFeed.discussion_id}/>
-            } )}
+                date: string,
+                media_type: string
+                
+            }) => {return <EachFeed eachFeed={eachFeed} key={eachFeed.Feed_Id}/>
+            } )
+            }
             </div>
          </div>
          </>
+
+
     )}
     

@@ -1,24 +1,57 @@
 import { LoginContext } from "../context/LoginContext"
-import { useContext } from "react"
-import {users} from "../dataTemp/data"
-import { getUserDetails } from "../util/util"
-import { Link } from "react-router-dom"
-import { getIdByUsername } from "../util/util"
+import { useContext, useEffect,useState } from "react"
+import { getAuth,signOut   } from "firebase/auth";
 
-export default function Profile (props: {setLogin: ()=> void})
+import { Link } from "react-router-dom"
+
+import { doc, getDoc } from "firebase/firestore";
+import db from "../src/firebase"
+
+
+
+export default function Profile ()
 {     
-    const {setLogin} = props
-    console.log(setLogin)
-    const {user} = useContext(LoginContext)
-    console.log(user)
-    const profileName = getUserDetails(users,user.username)
+
+
+   
+    const {loginInitials} = useContext(LoginContext)
+  
+    const [profile, setProfile] = useState({
+        username:'',
+        img_url:''})
+    function signingOut () {
+       
+        const auth = getAuth()
+        
+        signOut(auth)
+        
+    }
+
+useEffect((()=> {
+  
+    const docRef = doc(db, "users", loginInitials.id);
+ 
+    getDoc(docRef).then((doc)=> {
+    if (doc.exists()) {
+        
+        const pro = doc.data()
+      
+        setProfile(pro)
+      } else {
+        // docSnap.data() will be undefined in this case
+        console.log("No such document!");
+      }
+          })
+}),[])
+
+
 return (
 <div className="userProfile">
-    <img src={profileName.img_url}  className="proImg"/>
+    <img src={`${profile.img_url}`}  className="proImg"/>
    <div className="proNameProfile"> 
-    <p>{profileName.username}</p>
-    <p><Link to ={`${getIdByUsername(users, user.username)}`} >Profile</Link></p>
-    
+   
+    <p><Link to ={`${loginInitials.id}`} >{profile.username}</Link></p>
+    <p><button className="signOut" onClick={signingOut}>Sign Out</button></p>
     </div>
 </div>
 )

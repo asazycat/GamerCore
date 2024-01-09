@@ -1,17 +1,19 @@
 export function sortByMap (arr1: {
-                discussion_id: number,
+                Feed_Id: string,
                 user: string,
                 post_title: string,
                 post_content: string,
                 votes: number,
                 comment_amount: number,
-                date: string} [], 
+                date:  string,
+                media_type:string
+            } [], 
                 sortBy: string) 
     {
         
         
       const newArray = [...arr1]
-      console.log(sortBy)
+    
     if (sortBy === "popularity")
     {
         newArray.sort((a,b)=> b.votes - a.votes)
@@ -32,7 +34,7 @@ export function sortByMap (arr1: {
 
 
     export function findUser (arr1: {
-        user_id: number,
+        user_id: string,
         username: string ,
         img_url: string,
         bio: string,
@@ -40,13 +42,15 @@ export function sortByMap (arr1: {
         last_name: string,
         email: string,
         followers: number[],
-        following: number[] } [], searchTerm:string) {
+        following: number[]
+        password:string
+    } [], searchTerm:string) {
             if (searchTerm === '') {return []}
             const array = [...arr1]
               return array.filter((eachUser) => {
                 const regex = `^${searchTerm}`
                 const newRegex = new RegExp (regex, 'gmi')
-                console.log(regex)
+              
                 if (newRegex.test(eachUser.username)){
                     console.log(eachUser)
                     return eachUser
@@ -62,8 +66,17 @@ export function sortByMap (arr1: {
 
 
 
-export function checkPassword (arr1: {"user_id": number, username: string, "password": string}[],obj: {username: string, password: string}) {
-       console.log(arr1, obj)
+export function checkPassword (arr1: {  user_id: string,
+    username: string ,
+    img_url: string,
+    bio: string,
+    first_name: string,
+    last_name: string,
+    email: string,
+    followers: number[],
+    following: number[]
+    password:string}[],obj: {username: string, password: string}) {
+      console.log(arr1, obj)
        for (let i =0; i < arr1.length -1; i++)
        {
         if(arr1[i].username === obj.username && arr1[i].password === obj.password)
@@ -77,7 +90,7 @@ export function checkPassword (arr1: {"user_id": number, username: string, "pass
 
 
 export function getUserDetails ( arr1: {
-    user_id: number,
+    user_id: string,
     username: string ,
     img_url: string,
     bio: string,
@@ -85,7 +98,9 @@ export function getUserDetails ( arr1: {
     last_name: string,
     email: string,
     followers: number[],
-    following: number[] } [], username: string) {
+    following: number[]
+    password:string
+} [], username: string) {
 
         const userObj =  arr1.filter((user) => user.username === username)
 
@@ -95,7 +110,7 @@ export function getUserDetails ( arr1: {
 
 
     export function getIdByUsername(arr1: {
-        user_id: number,
+        user_id: string,
         username: string ,
         img_url: string,
         bio: string,
@@ -107,3 +122,5 @@ export function getUserDetails ( arr1: {
             const userObj =  arr1.filter((user) => user.username === username)
             return userObj[0].user_id
     } 
+
+
