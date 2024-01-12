@@ -3,7 +3,7 @@ export function sortByMap (arr1: {
                 user: string,
                 post_title: string,
                 post_content: string,
-                votes: number,
+                votes: string[],
                 comment_amount: number,
                 date:  string,
                 media_type:string
@@ -16,7 +16,7 @@ export function sortByMap (arr1: {
     
     if (sortBy === "popularity")
     {
-        newArray.sort((a,b)=> b.votes - a.votes)
+        newArray.sort((a,b)=> b.votes.length - a.votes.length)
         
     
             
@@ -33,7 +33,7 @@ export function sortByMap (arr1: {
 
 
 
-    export function findUser (arr1: {
+    export function findUser  (arr1: {
         user_id: string,
         username: string ,
         img_url: string,
@@ -41,8 +41,8 @@ export function sortByMap (arr1: {
         first_name: string,
         last_name: string,
         email: string,
-        followers: number[],
-        following: number[]
+        followers: string[],
+        following: string[]
         
     } [], searchTerm:string) {
             if (searchTerm === '') {return []}
@@ -73,8 +73,8 @@ export function checkPassword (arr1: {  user_id: string,
     first_name: string,
     last_name: string,
     email: string,
-    followers: number[],
-    following: number[]
+    followers: string[],
+    following: string[]
     password:string}[],obj: {username: string, password: string}) {
       console.log(arr1, obj)
        for (let i =0; i < arr1.length -1; i++)
@@ -97,8 +97,8 @@ export function getUserDetails ( arr1: {
     first_name: string,
     last_name: string,
     email: string,
-    followers: number[],
-    following: number[]
+    followers: string[],
+    following: string[]
     password:string
 } [], username: string) {
 
@@ -117,8 +117,8 @@ export function getUserDetails ( arr1: {
         first_name: string,
         last_name: string,
         email: string,
-        followers: number[],
-        following: number[] } [], username: string) {
+        followers: string[],
+        following: string[] } [], username: string) {
             const userObj =  arr1.filter((user) => user.username === username)
             return userObj[0].user_id
     } 

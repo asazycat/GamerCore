@@ -11,7 +11,7 @@ interface IFeed  {
     user: string,
     post_title: string,
     post_content: string,
-    votes: number,
+    votes: string[],
     comment_amount: number,
     date: string,
     media_type: string;
@@ -35,7 +35,7 @@ const [feed, setFeed] = useState<IFeed[]>([])
                 return { 
                 Feed_Id: doc.id, 
                 user: info.user,
-                post_title: info.title,
+                post_title: info.post_title,
                 post_content: info.post_content,
                 votes: info.votes,
                 comment_amount: info.comment_amount,
@@ -55,7 +55,7 @@ const [feed, setFeed] = useState<IFeed[]>([])
     
        
    
-    
+
 
    
     
@@ -100,7 +100,7 @@ const [feed, setFeed] = useState<IFeed[]>([])
                 user: string,
                 post_title: string,
                 post_content: string,
-                votes: number,
+                votes: string[],
                 comment_amount: number,
                 date: string,
                 media_type: string

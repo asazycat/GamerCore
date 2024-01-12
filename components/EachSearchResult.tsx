@@ -8,8 +8,8 @@ export default function EachSearchResult(props: {searchResult: {
     first_name: string,
     last_name:string ,
     email: string ,
-    followers:number[],
-    following: number[],}}) {
+    followers:string[],
+    following: string[],}}) {
     const {searchResult} = props
     return (
         <li>

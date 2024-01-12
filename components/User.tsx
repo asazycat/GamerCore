@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-
+import Follow from "./Follow";
 import {  useContext, useEffect, useState } from "react"
 import { LoginContext } from "../context/LoginContext"
 import { doc, getDoc } from "firebase/firestore";
@@ -11,11 +11,13 @@ import db from "../src/firebase"
 export default function User () {
 
     const {loginInitials} = useContext(LoginContext)
+
     const {user_id} = useParams()
-   const [id, setId] = useState(loginInitials.id)
+    const [id, setId] = useState(loginInitials.id)
     const [user, setUser] = useState({
         bio:'',
-      
+        first_name: '',
+        last_name:'',
         followers:[],
         following:[],
         img_url:'',
@@ -24,11 +26,11 @@ export default function User () {
 
     useEffect((()=> {
       
-        if (user_id === undefined) {
-            setId('loginInitials.id')
-        } else
-        {setId(user_id)}  
-      
+     console.log('render')
+      if (user_id === undefined) {
+        setId(loginInitials.id)
+    } else
+    {setId(user_id)} 
 
     const docRef = doc(db, "users", id);
     getDoc(docRef).then((doc)=> {
@@ -36,7 +38,10 @@ export default function User () {
       
         const data  = doc.data()
         const obj = {
+            
             bio: data.bio,
+            first_name: data.first_name,
+            last_name: data.last_name,
             username: data.username,
             followers: data.followers,
             following: data.following,
@@ -51,7 +56,7 @@ export default function User () {
           })
 })
 
-,[id, user_id])
+,[id, loginInitials.id, user_id])
      
 
    
@@ -60,13 +65,14 @@ export default function User () {
     
     
 
-    const followOrEdit = () => {
+    const  followOrEdit = () => {
         if (loginInitials.id === user_id)
         {
+            console.log('inside')
             return 'Edit'
-        }
-        else {
-            return 'Follow'
+        } else {
+           
+            return <Follow id={id} obj={user}/>
         }
     }
 
@@ -90,7 +96,7 @@ export default function User () {
             <p className="bioResult"> {user.bio}</p>
             </div>
             
-            <p>{followOrEdit()} </p>
+            {followOrEdit()} 
             <p>{messageOrSettings()}</p>
             </div>
 

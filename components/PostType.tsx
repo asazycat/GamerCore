@@ -1,7 +1,4 @@
 import {useState,useContext,useEffect, FormEvent} from 'react'
-
-
-
 import { collection, addDoc, doc , getDoc} from "firebase/firestore"; 
 import { LoginContext } from '../context/LoginContext'
 import db from "../src/firebase"
@@ -28,7 +25,7 @@ export default function PostType (props: {active: string}) {
             const docRef = doc(db, "users", loginInitials.id);
             getDoc(docRef).then((doc)=> {
             if (doc.exists()) {
-                console.log('exists ')
+                
                 const data  = doc.data()
                 const doctoObj = {
                     username: data.username
@@ -56,7 +53,7 @@ export default function PostType (props: {active: string}) {
                 user: user.username,
                 post_title: title,
                 post_content: text,
-                votes: 0,
+                votes: [],
                 comment_amount: 0,
                 date: theDate,
                 media_type: media
