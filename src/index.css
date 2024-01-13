@@ -394,6 +394,10 @@ background-color: #605f66d7;
   margin-right: auto;
   padding:2em;
 }
+a {
+  color:azure;
+}
+
 a:link {
   text-decoration: none;
 }

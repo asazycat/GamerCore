@@ -16,7 +16,11 @@ export default function Login (props: {login: boolean, setLogin: Dispatch<SetSta
         
         const auth = getAuth()
        
-        
+        function demoInitials() {
+            console.log('demo INitials')
+            setEmail('demoaccount@demo.co.uk')
+            setPassword('demoAccount')
+        }
         
         
     useEffect(()=> {
@@ -82,6 +86,7 @@ export default function Login (props: {login: boolean, setLogin: Dispatch<SetSta
                 
                 <input type="password" onChange={(e) => {setPassword(e.target.value)}}/> 
                 <label><button type="submit" className='loginButton'>Login</button></label>
+                <label><button onClick={demoInitials} className='loginButton'>Demo Account</button></label>
             </form>
         </div>
         </div>

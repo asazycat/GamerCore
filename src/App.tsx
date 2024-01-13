@@ -7,9 +7,10 @@ import Feed from '../components/Feed'
 import LFG from '../components/LFG'
 import User from '../components/User'
 import { useState } from 'react';
-
+import Inbox from '../components/Inbox.tsx'
 import Login from '../components/Login.tsx'
 import Post from '../components/Post.tsx'
+import Followers from '../components/Followers.tsx'
 function App() {
  
  const [login, setLogin] = useState(false)
@@ -23,6 +24,8 @@ return (
    <Header/> 
    
   <Routes>
+    <Route path="/Followers" element = {<Followers/>}/> 
+    <Route path="/Inbox" element={<Inbox/>}/>
   <Route path="/feed" element={<Feed />} />
   <Route path="/LFG" element={<LFG />} />
   <Route path=":user_id" element={<User/>} />
