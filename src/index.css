@@ -409,3 +409,52 @@ a:visited {
 a:hover {
   color: #dbb75a;
 }
+
+.exceptionHyperLink:link, .exceptionHyperLink:visited {
+  color:black
+}
+
+.exceptionHyperLink:hover {
+color: black;
+}
+
+
+.FeedPage {
+  border: 2px solid black;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5em;
+  padding:1em;
+  padding-top:0;
+  border-radius: 2em;
+  padding-left: 0;
+  padding-right: 0;
+ background-color: #A39AA9;
+}
+
+.feedTitle {
+  background-color: #7c6583;
+  padding:10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:azure;
+  font-size:5em;
+  margin-top: 0;
+  border-radius: 30px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius:0;
+}
+
+.feedUser {
+  margin-top: -7%;
+  border-bottom: 1px solid black;
+}
+
+.feedDate {
+  border-bottom: 1px solid black;
+  border-top: 1px solid  black;
+}
+
+.feedContent {
+  font-size: 1.5em;
+}

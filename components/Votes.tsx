@@ -3,7 +3,7 @@ import { useEffect, useContext, useState } from "react"
 import { LoginContext } from "../context/LoginContext"
 import { doc, setDoc } from "firebase/firestore"
 import db from "../src/firebase"
-
+import { IComments } from "../interfaces/interfaces"
 export default function Votes (props:{
     eachFeed: { 
     Feed_Id: string,
@@ -11,7 +11,7 @@ export default function Votes (props:{
     post_title: string,
     post_content: string,
     votes: string[] ,
-    comment_amount: number,
+    comments: IComments[],
     date: string,
     media_type:string
 }}) {
@@ -55,11 +55,11 @@ export default function Votes (props:{
             user: eachFeed.user,
             post_title: eachFeed.post_title,
             post_content:eachFeed.post_content,
-            comment_amount:eachFeed.comment_amount,
+            comments:eachFeed.comments,
             date:eachFeed.date,
             votes: state
         })
-    }, [displayVote, eachFeed.Feed_Id, eachFeed.comment_amount, eachFeed.date, eachFeed.post_content, eachFeed.post_title, eachFeed.user, state])
+    }, [displayVote, eachFeed.Feed_Id, eachFeed.comments, eachFeed.date, eachFeed.post_content, eachFeed.post_title, eachFeed.user, state])
 
 
 

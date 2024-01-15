@@ -1,35 +1,45 @@
 
 import { useEffect, useContext,useState } from "react"
 import { LoginContext } from "../context/LoginContext"
-import { doc, updateDoc } from "firebase/firestore"
+import { doc, updateDoc,getDoc } from "firebase/firestore"
 import db from "../src/firebase"
 
 
 export default function Follow (props: {id:string, obj:{username: string, first_name: string, last_name: string, following: string[], followers: string[], bio: string, img_url: string}}) {
 
-    const {id,obj} = props
+    const {id} = props
   
     const {loginInitials} = useContext(LoginContext)
-    const [newFollowers, setNewFollowers] = useState(obj.followers)
-    const followers = [...obj.followers]
+    const [newFollowers, setNewFollowers] = useState([])
+    
 
-    const addfollower = () => {
-
+    const addfollower = async () => {
+        console.log('1')
+        const docRef = doc(db, "users", id)
+        const data =  (await getDoc(docRef)).data()
+      
+           if (data !== undefined)
+        {
+            console.log(data)
+        const followers = data.followers
+        console.log(followers)
         if (followers.includes(loginInitials.id))
         {
-            const deleFollower =  followers.filter((element) => element !== loginInitials.id)
+            const deleFollower =  followers.filter((element: string) => element !== loginInitials.id)
             setNewFollowers(deleFollower)
         }
         else {
+            console.log('3')
         followers.push(loginInitials.id)
         setNewFollowers(followers)
         }
+    
     }
-
-
+    }
 
     useEffect(()=> {
        
+        
     
         console.log('through')
         const docRef = doc(db, "users",  id)
@@ -40,7 +50,7 @@ export default function Follow (props: {id:string, obj:{username: string, first_
             followers: newFollowers,
            
         })
-    }, [id, newFollowers])
+    }, [newFollowers])
 
 
    

@@ -1,19 +1,21 @@
+import { IComments } from "../interfaces/interfaces"
+
 export function sortByMap (arr1: {
                 Feed_Id: string,
                 user: string,
                 post_title: string,
                 post_content: string,
                 votes: string[],
-                comment_amount: number,
+                comments: IComments[],
                 date:  string,
                 media_type:string
             } [], 
                 sortBy: string) 
     {
         
-        
+       
       const newArray = [...arr1]
-    
+  
     if (sortBy === "popularity")
     {
         newArray.sort((a,b)=> b.votes.length - a.votes.length)
@@ -23,7 +25,7 @@ export function sortByMap (arr1: {
     }
     else if (sortBy === "commentAmount")
     {
-        newArray.sort((a,b)=> b.comment_amount - a.comment_amount)
+        newArray.sort((a,b)=> b.comments.length - a.comments.length)
     }
     else {
         return arr1
@@ -52,7 +54,7 @@ export function sortByMap (arr1: {
                 const newRegex = new RegExp (regex, 'gmi')
               
                 if (newRegex.test(eachUser.username)){
-                    console.log(eachUser)
+                   
                     return eachUser
                 }
                 else {

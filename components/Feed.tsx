@@ -5,14 +5,14 @@ import {sortByMap} from "../util/util"
 import db from "../src/firebase"
 import { Link } from "react-router-dom"
 import { getDocs, collection } from "firebase/firestore"
-
+import {IComments} from '../interfaces/interfaces'
 interface IFeed  {
     Feed_Id: string,
     user: string,
     post_title: string,
     post_content: string,
     votes: string[],
-    comment_amount: number,
+    comments: IComments[],
     date: string,
     media_type: string;
 }
@@ -20,8 +20,8 @@ interface IFeed  {
 
 
 export default function Feed () {
-    
-    const [selectedSortBy, setselectedSortBy] = useState("")
+  
+    const [selectedSortBy, setselectedSortBy] = useState("date")
 const [feed, setFeed] = useState<IFeed[]>([])
 
     useEffect(()=> {
@@ -32,13 +32,14 @@ const [feed, setFeed] = useState<IFeed[]>([])
           
             const docs = snapshot.docs.map(doc => {
                 const info = doc.data()
+                
                 return { 
                 Feed_Id: doc.id, 
                 user: info.user,
                 post_title: info.post_title,
                 post_content: info.post_content,
                 votes: info.votes,
-                comment_amount: info.comment_amount,
+                comments: info.comments,
                 date: info.date,
                 media_type: info.media_type
             }
@@ -69,7 +70,7 @@ const [feed, setFeed] = useState<IFeed[]>([])
             <label>
                 Sort By:
                 <select name="sortBy" value={selectedSortBy} onChange={e=> setselectedSortBy(e.target.value)}>
-                <option value="" ></option>
+                <option value="date" >Date</option>
                     <option value="popularity" >Popularity</option>
                     <option value="commentAmount" >Most Commented</option>  
                 </select>
@@ -91,9 +92,10 @@ const [feed, setFeed] = useState<IFeed[]>([])
             </div>
             
 
-             
+            
 
             <div className="feedList">
+               
             {
             sortByMap(feed, selectedSortBy).map((eachFeed:{
                 Feed_Id: string,
@@ -101,14 +103,16 @@ const [feed, setFeed] = useState<IFeed[]>([])
                 post_title: string,
                 post_content: string,
                 votes: string[],
-                comment_amount: number,
+                comments: IComments[],
                 date: string,
                 media_type: string
                 
             }) => {return <EachFeed eachFeed={eachFeed} key={eachFeed.Feed_Id}/>
             } )
             }
+             
             </div>
+           
          </div>
          </>
 

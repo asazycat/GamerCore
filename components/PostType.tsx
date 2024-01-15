@@ -54,7 +54,7 @@ export default function PostType (props: {active: string}) {
                 post_title: title,
                 post_content: text,
                 votes: [],
-                comment_amount: 0,
+                comments: [],
                 date: theDate,
                 media_type: media
             })
