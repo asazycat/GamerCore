@@ -10,6 +10,7 @@ import db from "../src/firebase"
 export default function SearchResult(props: {searchTerm: string}) {
     const {searchTerm} = props
     const [users, setUsers] = useState<IUsers[]>([])
+    
 
     useEffect(()=> {
         (async () => {
@@ -44,7 +45,7 @@ export default function SearchResult(props: {searchTerm: string}) {
             {
                 
                 findUser(users, searchTerm).map((eachSearchResult) => {
-                   return <EachSearchResult searchResult={eachSearchResult}/>
+                   return <EachSearchResult searchResult={eachSearchResult} />
                 })
             }
         </ul>
