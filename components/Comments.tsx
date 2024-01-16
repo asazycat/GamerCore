@@ -1,12 +1,12 @@
 import { FormEvent } from "react";
 import { doc, updateDoc, getDoc } from "firebase/firestore";
 import { useState, useEffect } from "react";
-import { IComments,IFeedPage } from "../interfaces/interfaces";
+import { IComments } from "../interfaces/interfaces";
 
 import db from '../src/firebase'
 
 
-export default function Comments(props: {id:string, feed: IFeedPage}) {
+export default function Comments(props: {id:string}) {
 
 
   

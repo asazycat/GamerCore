@@ -5,17 +5,7 @@ import {sortByMap} from "../util/util"
 import db from "../src/firebase"
 import { Link } from "react-router-dom"
 import { getDocs, collection } from "firebase/firestore"
-import {IComments} from '../interfaces/interfaces'
-interface IFeed  {
-    Feed_Id: string,
-    user: string,
-    post_title: string,
-    post_content: string,
-    votes: string[],
-    comments: IComments[],
-    date: string,
-    media_type: string;
-}
+import {IComments, IFeed} from '../interfaces/interfaces'
 
 
 

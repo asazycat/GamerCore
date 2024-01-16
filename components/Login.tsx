@@ -31,7 +31,7 @@ export default function Login (props: {login: boolean, setLogin: Dispatch<SetSta
              setLogin(true)
             } else {
            
-             console.log('out log')
+           
              setLogin(false)
             }
         })      

@@ -5,7 +5,7 @@ import { doc, updateDoc,getDoc } from "firebase/firestore"
 import db from "../src/firebase"
 
 
-export default function Follow (props: {id:string, obj:{username: string, first_name: string, last_name: string, following: string[], followers: string[], bio: string, img_url: string}}) {
+export default function Follow (props: {id:string}) {
 
     const {id} = props
   

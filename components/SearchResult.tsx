@@ -1,21 +1,11 @@
 import { useEffect,useState } from "react"
 import { findUser } from "../util/util"
+import {IUsers } from "../interfaces/interfaces"
 import EachSearchResult from "./EachSearchResult"
 import { getDocs, collection } from "firebase/firestore"
 import db from "../src/firebase"
 
-interface IUsers {
-    user_id: string,
-    username: string ,
-    img_url: string,
-    bio: string,
-    first_name: string,
-    last_name: string,
-    email: string,
-    followers: string[],
-    following: string[]
-  
-}
+
 
 export default function SearchResult(props: {searchTerm: string}) {
     const {searchTerm} = props

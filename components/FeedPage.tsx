@@ -60,7 +60,7 @@ export default function FeedPage () {
         
         
          <p className="feedDate">{feedPage.date}</p>
-        <Comments id={postId} feed={feedPage}/>
+        <Comments id={postId} />
          </div>
     )
 }

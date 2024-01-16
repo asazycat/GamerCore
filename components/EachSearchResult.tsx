@@ -1,15 +1,6 @@
 import { Link } from "react-router-dom"
-
-export default function EachSearchResult(props: {searchResult: {
-    user_id: string,
-    username: string,
-    img_url: string,
-    bio: string,
-    first_name: string,
-    last_name:string ,
-    email: string ,
-    followers:string[],
-    following: string[],}}) {
+import { IUsers } from "../interfaces/interfaces"
+export default function EachSearchResult(props: {searchResult: IUsers}) {
     const {searchResult} = props
     return (
         <li>
