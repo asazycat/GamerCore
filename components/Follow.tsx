@@ -14,7 +14,7 @@ export default function Follow (props: {id:string}) {
     
 
     const addfollower = async () => {
-        console.log('1')
+      
         const docRef = doc(db, "users", id)
         const data =  (await getDoc(docRef)).data()
       
@@ -29,7 +29,7 @@ export default function Follow (props: {id:string}) {
             setNewFollowers(deleFollower)
         }
         else {
-            console.log('3')
+         
         followers.push(loginInitials.id)
         setNewFollowers(followers)
         }
