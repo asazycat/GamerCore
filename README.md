@@ -1,1 +1,2 @@
-https://gamercore-ec2e2.firebaseapp.com/
+
+gamercore-ec2e2.web.app
