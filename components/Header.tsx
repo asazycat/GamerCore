@@ -17,7 +17,7 @@ export default function Header () {
         
         <div className="upperBar">
            
-        <SearchBar searchTerm={searchTerm} setSearchTerm={handleSearchTerm}/>
+       
           
             <ul className="navigation">
           
@@ -30,7 +30,9 @@ export default function Header () {
         
         <Profile/>
         </div>
+        <SearchBar searchTerm={searchTerm} setSearchTerm={handleSearchTerm}/>
         <SearchResult searchTerm={searchTerm}/>
+
         <Sidebar/>
        </>
        

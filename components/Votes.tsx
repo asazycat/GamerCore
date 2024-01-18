@@ -65,7 +65,7 @@ export default function Votes (props:{
 
     return (
         <>
-       <p className="votes">{displayVote} <button onClick={upvote}>upvote</button></p>
+       <p className="votes"> {displayVote}<button onClick={upvote} className="voteButton">Λ</button></p>
         </>
     )
 }

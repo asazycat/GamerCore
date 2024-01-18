@@ -53,8 +53,8 @@ return (
     <img src={`${profile.img_url}`}  className="proImg"/>
    <div className="proNameProfile"> 
    
-    <p><Link to ={`${loginInitials.id}`} >{profile.username}</Link></p>
-    <p><button className="signOut" onClick={signingOut}>Sign Out</button></p>
+    <p className ="userName"><Link to ={`${loginInitials.id}` }  >{profile.username}</Link></p>
+    <button className="signOut" onClick={signingOut}>Sign Out</button>
     </div>
 </div>
 )

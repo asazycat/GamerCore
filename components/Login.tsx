@@ -2,9 +2,7 @@
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged   } from "firebase/auth";
 import { LoginContext } from '../context/LoginContext';
 import { useContext, useState, useEffect, Dispatch, SetStateAction,  } from 'react';
-
-
-import image from '../images/gaming.jpg'
+import gaming from '../images/epicImg.jpg'
 
 
 export default function Login (props: {login: boolean, setLogin: Dispatch<SetStateAction<boolean>>}) {
@@ -70,7 +68,7 @@ export default function Login (props: {login: boolean, setLogin: Dispatch<SetSta
 
        return (
          <div className='bg-apply'>
-            <img src={`${image}`} />
+            <img src={`${gaming} `} className="loginImg" alt="https://wallpapercave.com/all-video-game-characters-wallpaper"/>
         <div className="login">
            
             <form onSubmit={handleSubmit}>
@@ -86,7 +84,7 @@ export default function Login (props: {login: boolean, setLogin: Dispatch<SetSta
                 
                 <input type="password" onChange={(e) => {setPassword(e.target.value)}}/> 
                 <label><button type="submit" className='loginButton'>Login</button></label>
-                <label><button onClick={demoInitials} className='loginButton'>Demo Account</button></label>
+                <label><button onClick={demoInitials} className="demoButton" >Demo Account</button></label>
             </form>
         </div>
         </div>

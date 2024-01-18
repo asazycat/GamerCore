@@ -1,0 +1,460 @@
+body {
+    margin:0px;
+    background-color: #3c008ae5;
+    }
+    
+    
+    
+    
+    .navigation  {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      border: 3px solid #7c6583;
+      list-style-type: none;
+      position: relative;
+      border-radius: 2em;
+      background-color: #655769
+    }
+    
+    .navigation > li {
+      margin: 2em;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 1.5em;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color:azure
+    }
+    
+    .searchBar {
+    
+    
+    margin-top:auto;
+    margin-bottom: auto;
+    border-radius: 5em;
+    margin-left: 0.5%;
+    padding:0.5em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: left;
+    border: 3px solid #816583;
+    background-color: #655769;
+    color:azure;
+    }
+    
+    .upperBar {
+      
+     
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color:#3c008ad7;
+     
+      
+     
+    }
+    
+    
+    .format {
+      
+      
+      border-radius: 2em;
+      max-width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+      padding:2em;
+    height:50em;
+    overflow: auto;
+    background-color: #3c008ad7;
+    
+    }
+    
+    .userProfile {
+      display: flex;
+      background-color:#4b2085d7;
+     column-gap: 1em;
+     padding-left: 1em ;
+     padding-right: 1em;
+     border:2px solid #4b2085d7;
+     
+    
+    }
+    
+    
+    .sidebar  {
+      
+      color:azure;
+    float: right;
+    width: 20%;
+    height:75em;
+    text-align: left;
+    background-color: #4b2085d7;
+    
+    }
+    
+    .sidebar > ul {
+    list-style-type: none;
+    font-size: 1.5em;
+    line-height: 5em;
+    margin-top: 5em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    
+    .searchResult {
+    
+    float: left;
+    width: 20%;
+    height:75em;
+    background-color: #4b2085d7;
+    
+    
+    
+    }
+    
+    .selectBoxes {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      
+    }
+    
+    .sortBy {
+      
+      width: max-content;
+      color:#f0ffff;
+      border: 3px solid #816583;
+    background-color: #655769;
+    border-radius: 2em;
+    padding: 1em;
+    }
+    
+    .filter {
+      border: 3px solid #816583;
+      background-color: #655769;
+      border-radius: 2em;
+      padding: 1em;
+      width: max-content;
+     color:#f0ffff
+    }
+    
+    
+    .feedList {
+      
+      list-style-type: none;
+      
+      text-align: center;
+     
+      padding: 2em;
+     
+    }
+    
+    
+    .eachFeed {
+      background-color: #A39AA9;
+    border: #111011 solid;
+    margin-top: 5%;
+    border-radius: 2em;
+    padding-top: 0;
+    }
+    
+    
+    .postTitle {
+      
+      text-align: left;
+      font-size: 3em;
+      background-color: #7c6583;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color:#f0ffff;
+      padding:10px;
+      margin-top: 0%;
+      border-radius: 0.5em;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom: #111011 2px solid;
+    }
+    
+    .userPost   {
+      text-align: left;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 1em;
+      border-bottom: 2px solid gray;
+      margin-top: -5%;
+    }
+    
+    .postContent {
+      
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color:#111011;
+      font-size:1.5em;
+      
+    }
+    
+    .votes {
+      text-align: left;
+      
+    }
+    
+    .date {
+      
+      text-align: right;
+    border:1px solid grey;
+    }
+    
+    
+    
+    .comment_amount {
+      text-align: left;
+    }
+    
+    .searchResult > ul {
+      
+      list-style-type: none;
+      
+      width:15em;
+    }
+    
+    
+    .eachSearch {
+      background-color: #7c6583;
+      border: 1px solid  #7c6583;
+      text-align: left;
+      border-radius: 2em;
+     
+      margin-top:0.5em;
+      margin-left: -10%;
+    }
+    
+    .searchImg {
+      
+      border:1px solid black;
+      border-radius: 5em;
+      height: 50px;
+      width:50px;
+    }
+    
+    .searchUsername {
+      font-size: 1em;
+    }
+    
+    .top {
+      display: flex;
+      flex-direction: row;
+      column-gap: 1em;;
+    }
+    .bio {
+      text-align: center;
+    }
+    
+    
+    .userPage {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5em;
+      border:5px solid darkgreen;
+      border-radius:4em ;
+      padding:2em;
+      width:50%;
+      
+      
+    }
+    .userBioImg {
+      display: flex;
+      flex-direction: row;
+      column-gap: 1em;
+    }
+    
+    
+    .secondPart {
+      margin-left: auto;
+      margin-right: auto;
+      
+      text-align: center;
+    }
+    .username {
+      font-size: 3em;
+    }
+    .bioResult {
+      font-size: 2em;
+    }
+    
+    .pageProfile {
+      border: 1px solid black;
+      border-radius: 15em;
+    }
+    
+    
+    .proImg {
+      height:3em;
+       width:3em;
+       border-radius: 5em;
+       margin-top: auto;
+       margin-bottom: auto;
+    }
+    
+    
+    
+    .login > form {
+      
+     
+      display: flex;
+      flex-direction: column;
+     text-align: left;
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     justify-content: center;
+      background-color: #47059e;
+      color:#f5f5f5;
+      padding:2em;
+     font-size: 2em;
+     border-radius: 3em;
+     border: 3px solid #7c6583;
+    } 
+    
+    .login {
+    
+      position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        
+    }
+    .loginButton {
+      border:0;
+     
+      margin-top: 5%;
+      width: 100%;
+      font-size: 1em;
+      background-color: #7c6583;
+      border: 1px solid  #7c6583;
+      color:#dbb75a;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    
+    
+    .bg-apply {
+      background-image:url("../images/gaming.jpg") "no-repeat";
+    }
+    
+    
+    
+    
+    .postButton {
+      border: 3px solid #816583;
+    background-color: #605f66d7;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 2em;  
+      
+      width:50%;
+      margin-top:5%;
+      
+      padding: 2em;
+    }
+    
+     .share {
+      
+      border: none;
+      color:#f5f5f5;
+      background-color: #4b2085d7;
+      font-size: 1.5em;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color:azure;
+     
+    }
+    
+    .postType {
+      display: flex;
+      flex-direction: row;
+      column-gap: 50%;
+      justify-content: center;
+    }
+    
+    
+    .postForm {
+      text-align: center;
+      border: 5px solid red;
+      width:50%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top:5%;
+      padding:2em;
+    }
+    
+    
+    .discussionForm > form {
+      border: 5px solid blue;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width:50%;
+      margin-left: auto;
+      margin-right: auto;
+      padding:2em;
+    }
+    a {
+      color:azure;
+    }
+    
+    a:link {
+      text-decoration: none;
+    }
+    a:visited {
+      color:azure;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      color: #dbb75a;
+    }
+    
+    .exceptionHyperLink:link, .exceptionHyperLink:visited {
+      color:black
+    }
+    
+    .exceptionHyperLink:hover {
+    color: black;
+    }
+    
+    
+    .FeedPage {
+      border: 2px solid black;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5em;
+      padding:1em;
+      padding-top:0;
+      border-radius: 2em;
+      padding-left: 0;
+      padding-right: 0;
+     background-color: #A39AA9;
+    }
+    
+    .feedTitle {
+      background-color: #7c6583;
+      padding:10px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color:azure;
+      font-size:5em;
+      margin-top: 0;
+      border-radius: 30px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius:0;
+    }
+    
+    .feedUser {
+      margin-top: -7%;
+      border-bottom: 1px solid black;
+    }
+    
+    .feedDate {
+      border-bottom: 1px solid black;
+      border-top: 1px solid  black;
+    }
+    
+    .feedContent {
+      font-size: 1.5em;
+    }

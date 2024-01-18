@@ -54,9 +54,9 @@ export default function FeedPage () {
     }, [Feed_Id, loginInitials.id, postId])
     return (
         <div className="FeedPage">
-       <h1 className="feedTitle">{feedPage.post_title}</h1> 
-         <p className="feedUser">{feedPage.user}</p>
-         <p className="feedContent">{feedPage.post_content}</p>
+       <h1 className="postTitle">{feedPage.post_title}</h1> 
+         <p className="userPost">{feedPage.user}</p>
+         <p className="postContent">{feedPage.post_content}</p>
         
         
          <p className="feedDate">{feedPage.date}</p>

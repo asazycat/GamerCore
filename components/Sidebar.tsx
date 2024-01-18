@@ -2,13 +2,13 @@
 import { Link } from "react-router-dom"
 export default function Sidebar () {
     return (
-        <div className="sidebar">
-        <ul>
-            <Link to="/Inbox"><li>Inbox</li></Link>
-            <Link to="/Followers"><li>Follwers</li></Link>
+       
+        <ul className="sideBar">
+           <li> <Link to="/Inbox">Inbox</Link></li>
+           <li> <Link to="/Followers">Follwers</Link></li>
             <li>My Clubs</li>
             <li>Studio</li>
         </ul>
-        </div>
+        
     )
 }

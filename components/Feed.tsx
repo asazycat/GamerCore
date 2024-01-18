@@ -52,7 +52,7 @@ const [feed, setFeed] = useState<IFeed[]>([])
     
     return (
         <>
-        <div className="postButton"><label><Link to="/post"><button className="share" >Share</button></Link></label></div>
+        
         <div className="format">
 
             <div className="selectBoxes">
@@ -77,6 +77,7 @@ const [feed, setFeed] = useState<IFeed[]>([])
                     <option value="voted" >Video/Img</option>
                     <option value="voted" >Discussion</option>
                 </select>
+                <label><Link to="/post"><button className="share" >Share</button></Link></label>
             </label>
             </div>
             </div>
