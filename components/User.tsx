@@ -72,7 +72,7 @@ export default function User () {
             return 'Edit'
         } else {
            
-            return <Follow id={id} />
+            return <Follow id={id}/>
         }
     }
 

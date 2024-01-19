@@ -15,9 +15,9 @@ export default function Post () {
            <label><button value='discussion' onClick={e => postValue(e)}>Discussion</button></label>
            <label><button value='video/Img' onClick={e => postValue(e)}>Vid/Img</button></label>
            </div>
-          
+           <PostType active={active} />
         </div>
-       <PostType active={active} />
+       
        </>
     )
 }

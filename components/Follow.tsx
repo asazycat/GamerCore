@@ -58,7 +58,7 @@ export default function Follow (props: {id:string}) {
 
     return (
         <>
-        <button onClick={addfollower}>Follow!</button>
+        <button onClick={addfollower}  className="follow">Follow!</button>
         </>
     )
 }

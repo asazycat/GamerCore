@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { IComments } from "../interfaces/interfaces";
 
 import db from '../src/firebase'
+import ListOfComments from "./ListOfComments";
 
 
 export default function Comments(props: {id:string}) {
@@ -60,11 +61,12 @@ export default function Comments(props: {id:string}) {
     return (
         
            
-      
+      <div>
         <form onSubmit={e =>  {handleSubmit(e)}}>
             <label>Post Comment<input type="text" value={commentText} onChange={e => setCommentText(e.target.value)}></input></label>
             <button type="submit">Post</button>
             </form>
-       
+            <ListOfComments/>
+            </div>
     )
 }
