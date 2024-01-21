@@ -218,13 +218,18 @@ a:hover {
     color:rgba(224, 147, 3, 0.973)
 }
 
-
+.format {
+    
+}
 
 .selectBoxes , .filter, .sortBy {
     
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     
     
  
@@ -254,7 +259,8 @@ a:hover {
 
 
 .share {
-    display: inline;
+
+    margin-right: 1em;
     border:0;
     background-color: rgb(106, 101, 92);
     font-size: 1em;
@@ -262,7 +268,7 @@ a:hover {
     color:white;
     border: 2px solid rgba(204, 137, 13, 0.808);
     position: relative;
-    left:40%;
+   
     border-radius: 100px;
 }
 
@@ -439,3 +445,594 @@ a:hover {
     color: rgba(224, 147, 3, 0.973);
 }
   
+
+
+
+
+
+
+@media only screen and (max-width: 1100px) {
+
+    .upperBar {
+        display: flex;
+        flex-direction: row;
+        border-style: double;
+        border-color: rgb(68, 64, 64);
+        border-width: 10px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        justify-content: space-around;
+       max-width:100%;
+      
+    }
+
+    
+    .upperBar  .navigation {
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       
+    
+    }
+    
+    .upperBar .navigation > li {
+        font-size: 1.5em;
+        list-style-type: none;
+        padding: 1em 2em;
+        margin-top: 0;
+        margin-bottom: 0;
+        position: relative;
+        color:white;
+        font-family: 'Courier New', Courier, monospace;
+        text-decoration: none;
+    }
+    
+    
+    .userProfile {
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-top:  1em;
+       
+        
+    } 
+    .userProfile .userName {
+        font-size: 1.0em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       
+    }
+    
+    
+    
+    
+    .proImg {
+        height: 4em;
+        width:4em;
+        margin-right: 1%;
+        margin-top: 5%;
+        border-radius: 40px;
+    }
+    
+    .signOut {
+        border: 0;
+        background-color: rgb(141, 137, 130);
+        font-size: 0.5em;
+        font-family:'Courier New', Courier, monospace  ;
+    }
+    .signOut:hover {
+        background-color: rgb(160, 156, 149);
+        color: white;
+    }
+
+    .sideBar  {
+ 
+        display: inline;
+         height: auto;
+         position: fixed;
+        
+         font-size: 1.0em;
+         list-style-type:none ;
+         margin-top: 2%;
+         font-family:'Courier New', Courier, monospace  ;
+         border-style: double;
+         border-color: rgb(68, 64, 64);
+         border-width: 5px;
+         border-top: 0;
+         border-bottom: 0;
+         border-right: 0;
+         
+     }
+
+     .searchBar {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display:inline;
+        position: relative; 
+       padding: 5px;
+        font-size: 0.75em;
+        color:white;
+        height:50%;
+        top: 50px;
+        border-style: double;
+        border-color: rgb(68, 64, 64);
+        border-width: 5px;
+        border-top: 0;
+        border-bottom: 0;
+        border-left: 0;
+        
+        
+    }
+
+    .searchBar > label > input {
+        width: 15%;
+    }
+
+    .searchResult > ul {
+        
+        display: inline;
+       text-align: left;
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+        position: absolute;
+        
+    }
+    
+    .eachSearch {
+        
+        margin-top: 55%;
+        font-size: 0.75em;
+        border-top: 1px solid rgb(68,64,64);
+       
+    }
+    
+     .top {
+        display: flex;
+        flex-direction: row;
+        width: 10em;
+        justify-content: space-between;
+        margin-top: 10%;
+    
+        
+    }
+    .searchImg {
+        border-radius: 50px;
+    }
+
+    .selectBoxes , .filter, .sortBy {
+    
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        
+     
+    }
+    
+    .selectBoxes {
+        margin-top: 2%;
+        padding: 1em;
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        background-color: rgb(68, 64, 64);
+        border-top-left-radius: 1.5em;
+        border-top-right-radius: 1.5em;
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        line-height: 50px;
+        border: 2px solid rgb(68, 64, 64);
+        color:white;
+        font-size: 1em;
+        margin-bottom:1%;
+    }
+    
+    
+    
+    
+    .share {
+    
+        margin-right: 1em;
+        border:0;
+        background-color: rgb(106, 101, 92);
+        font-size: 0.75em;
+        font-family:'Courier New', Courier, monospace  ;
+        color:white;
+        border: 2px solid rgba(204, 137, 13, 0.808);
+        position: relative;
+       
+        border-radius: 100px;
+    }
+    
+    .share:hover {
+        background-color: rgb(121, 119, 114);
+        color: rgba(224, 147, 3, 0.973);
+    }
+    
+    
+    .feedList {
+       
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        list-style-type: none;
+      
+        padding: 0.25em;
+        
+    }
+    
+    .eachFeed {
+       
+        margin-top: 1%;
+        background-color: #69676b;
+        border-radius: 10px;
+    
+    }
+    
+    .postTitle  {
+        margin: 0;
+        padding:3px;
+        color:white;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
+        font-size: 2em;
+         border-radius: 0.25em;
+         background-color: rgba(204, 137, 13, 0.808);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border: 2px solid black;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        
+    }
+    
+    .userPost {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:aliceblue;
+        border-bottom: 2px;
+        border: 1px solid;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+       
+    }
+    .postContent {
+       font-size: 1em;
+       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; ;
+        color:rgb(6, 6, 6)
+    }
+    .votes {
+        text-align: left;
+        font-size: 1em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: -1%;
+      
+      }
+    
+      .voteButton {
+        border: 0;
+        background-color: #69676b;
+        font-size: 1em;
+    
+    }
+    .voteButton:hover {
+        color: rgba(165, 113, 17, 0.973);
+    }
+    
+    .date {
+        
+        text-align: right;
+      border:1px solid grey;
+      }
+    
+      
+      .comment_amount {
+        text-align: left;
+      }
+  }
+
+
+  @media screen and (max-width: 815px) {
+    .upperBar {
+        display: flex;
+        flex-direction: column;
+        
+        border: 2px solid rgb(68, 64, 64);
+        border-width: 2px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        justify-content: space-around;
+       max-width:100%;
+      
+    }
+
+    
+    .upperBar  .navigation {
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      
+       width:100%;
+    
+    }
+    
+    .upperBar .navigation > li {
+        font-size: 1em;
+        list-style-type: none;
+        padding: 1em 2em;
+        margin-top: 0;
+        margin-bottom: 0;
+        position: relative;
+        color:white;
+        font-family: 'Courier New', Courier, monospace;
+        text-decoration: none;
+        border: 2px solid  rgb(68, 64, 64);
+        border-width: auto;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        margin-left: -10%;
+        text-align: center;
+    }
+    
+    .upperBar .navigation > li:hover {
+        background-color: rgb(141, 137, 130);
+        color:rgba(224, 147, 3, 0.973)
+    }
+    .userProfile {
+        display: flex;
+        flex-direction: row;
+        margin-right: auto;
+        margin-left: auto;
+       margin-top: 0;
+       padding-top:-20px;
+        
+    } 
+    .userProfile .userName {
+        font-size: 0.75em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       
+    }
+    
+    
+    
+    
+    .proImg {
+        height: 3em;
+        width:3em;
+      
+       
+        border-radius: 40px;
+    }
+    
+    .signOut {
+        border: 0;
+        background-color: rgb(141, 137, 130);
+        font-size: 0.5em;
+        font-family:'Courier New', Courier, monospace  ;
+    }
+    .signOut:hover {
+        background-color: rgb(160, 156, 149);
+        color: white;
+    }
+
+    .sideBar  {
+ 
+        display: inline;
+         height: auto;
+         position: fixed;
+        
+         font-size: 1em;
+         list-style-type:none ;
+         margin-top: 2%;
+         font-family:'Courier New', Courier, monospace  ;
+         border-style: double;
+         border-color: rgb(68, 64, 64);
+         border-width: 5px;
+         border-top: 0;
+         border-bottom: 0;
+         border-right: 0;
+         
+     }
+
+     .searchBar {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display:inline;
+        position: relative; 
+       padding: 5px;
+        font-size: 0.75em;
+        color:white;
+        height:50%;
+        top: 50px;
+        border-style: double;
+        border-color: rgb(68, 64, 64);
+        border-width: 5px;
+        border-top: 0;
+        border-bottom: 0;
+        border-left: 0;
+        
+        
+    }
+
+    .searchBar > label > input {
+        width: 15%;
+    }
+
+    .searchResult > ul {
+        
+        display: inline;
+       text-align: left;
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+        position: absolute;
+        
+    }
+    
+    .eachSearch {
+        
+        margin-top: 55%;
+      
+        border-top: 1px solid rgb(68,64,64);
+       
+    }
+    
+     .top {
+        display: flex;
+        flex-direction: row;
+        width: 10em;
+        justify-content: space-between;
+        margin-top: 10%;
+    
+        
+    }
+    .searchImg {
+        border-radius: 50px;
+        width:45%;
+             
+    }
+
+    .selectBoxes , .filter, .sortBy {
+    
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        
+     
+    }
+    
+    .selectBoxes {
+        margin-top: 2%;
+        padding: 1em;
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        background-color: rgb(68, 64, 64);
+        border-top-left-radius: 1.5em;
+        border-top-right-radius: 1.5em;
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        line-height: 50px;
+        border: 2px solid rgb(68, 64, 64);
+        color:white;
+        font-size: 1em;
+        margin-bottom:1%;
+    }
+    
+    
+    
+    
+    .share {
+    
+        margin-right: 1em;
+        border:0;
+        background-color: rgb(106, 101, 92);
+        font-size: 0.55em;
+        font-family:'Courier New', Courier, monospace  ;
+        color:white;
+        border: 2px solid rgba(204, 137, 13, 0.808);
+        position: relative;
+       
+        border-radius: 100px;
+    }
+    
+    .share:hover {
+        background-color: rgb(121, 119, 114);
+        color: rgba(224, 147, 3, 0.973);
+    }
+    
+    
+    .feedList {
+       
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        list-style-type: none;
+      
+        padding: 0.25em;
+        
+    }
+    
+    .eachFeed {
+       
+        margin-top: 1%;
+        background-color: #69676b;
+        border-radius: 10px;
+    
+    }
+    
+    .postTitle  {
+        margin: 0;
+        padding:3px;
+        color:white;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
+        font-size: 1.5em;
+         border-radius: 0.25em;
+         background-color: rgba(204, 137, 13, 0.808);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border: 2px solid black;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        
+    }
+    
+    .userPost {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:aliceblue;
+        border-bottom: 2px;
+        border: 1px solid;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+       
+    }
+    .postContent {
+       font-size: 1em;
+       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; ;
+        color:rgb(6, 6, 6)
+    }
+    .votes {
+        text-align: left;
+        font-size: 1em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: -1%;
+      
+      }
+    
+      .voteButton {
+        border: 0;
+        background-color: #69676b;
+        font-size: 1em;
+    
+    }
+    .voteButton:hover {
+        color: rgba(165, 113, 17, 0.973);
+    }
+    
+    .date {
+        
+        text-align: right;
+      border:1px solid grey;
+      }
+    
+      
+      .comment_amount {
+        text-align: left;
+      }
+  }

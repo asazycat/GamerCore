@@ -66,7 +66,7 @@ export default function Comments(props: {id:string}) {
             <label>Post Comment<input type="text" value={commentText} onChange={e => setCommentText(e.target.value)}></input></label>
             <button type="submit">Post</button>
             </form>
-            <ListOfComments/>
+            <ListOfComments id={id}/>
             </div>
     )
 }
