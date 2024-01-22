@@ -453,6 +453,66 @@ a:hover {
 
 @media only screen and (max-width: 1100px) {
 
+    .login > form {
+   
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        margin:auto;
+        position: absolute;
+        right:35%;
+        margin-top: 20%;
+        padding:3em;
+        line-height: 1.5em;
+        color: white;
+        background: rgb(48, 46, 46);
+        border-radius: 2em;
+        font-family:'Courier New', Courier, monospace;
+        font-size: 1.5em;
+        opacity: 0.8;
+    }
+    
+    
+    .loginButton {
+        border:0px;
+        background-color: rgb(141, 137, 130);
+        padding:0.5em;
+        margin-top: 10%;
+        border-radius: 10px;
+        width: 100%;
+        font-size:1em;
+        font-family:'Courier New', Courier, monospace ;
+        position:relative;
+    }
+    
+    .loginButton:hover {
+    background-color: rgb(160, 156, 149);
+    color: white;
+    }
+    
+    .demoButton {
+        background-color:rgb(68, 64, 64); ;
+        border: 0px;
+        color: rgba(204, 137, 13, 0.808)
+    }
+    
+    .demoButton:hover {
+        color: rgba(224, 147, 3, 0.973)
+    }
+    
+    .loginImg {
+        display:block;
+        position: relative;
+        float:left;
+        width:100%;
+       
+        
+        opacity: 0.3;
+        height:1500px;
+        
+    }
+    
+
     .upperBar {
         display: flex;
         flex-direction: row;
@@ -735,10 +795,146 @@ a:hover {
       .comment_amount {
         text-align: left;
       }
+
+      .FeedPage {
+        background-color: #69676b;
+        border-radius: 10px;
+        
+        margin-left: auto;
+        margin-right: auto;
+        width:50%;
+    }
+    
+    .userPage {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5em;
+        border-radius:4em ;
+        padding:2em;
+        width:50%;
+        color:white;
+        background-color: #69676b;
+        
+      }
+      .userBioImg {
+        display: flex;
+        flex-direction: row;
+        column-gap: 1em;
+      }
+      
+      
+      .secondPart {
+        margin-left: auto;
+        margin-right: auto;
+        
+        text-align: center;
+      }
+      .username {
+        font-size: 2em;
+      }
+      .bioResult {
+        font-size: 1.5em;
+      }
+      
+      .pageProfile {
+        height: 10em;
+        width: 10em;
+        border-radius: 15em;
+      }
+      
+     
+      
+      .postForm {
+        border: 2px solid green;
+        margin-left: auto;
+        margin-right:auto;
+        width:50%;
+      }
+    
+      .postType {
+        border: 2px solid blue;
+      }
+    
+      .follow {
+       
+        margin-top: 1%;
+        margin-bottom:auto;
+        background-color: rgb(106, 101, 92);
+        font-size: 1em;
+        font-family:'Courier New', Courier, monospace  ;
+        color:white;
+        border: 2px solid rgba(204, 137, 13, 0.808);
+        border-radius: 100px;
+      }
+    
+      .follow:hover {
+        background-color: rgb(121, 119, 114);
+        color: rgba(224, 147, 3, 0.973);
+    }
   }
 
 
   @media screen and (max-width: 815px) {
+
+    .login > form {
+   
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        margin:auto;
+        position: absolute;
+        right:35%;
+        margin-top: 20%;
+        padding:3em;
+        line-height: 1.5em;
+        color: white;
+        background: rgb(48, 46, 46);
+        border-radius: 2em;
+        font-family:'Courier New', Courier, monospace;
+        font-size: 1em;
+        opacity: 0.8;
+    }
+    
+    
+    .loginButton {
+        border:0px;
+        background-color: rgb(141, 137, 130);
+        padding:0.5em;
+        margin-top: 10%;
+        border-radius: 10px;
+        width: 100%;
+        font-size:0.75em;
+        font-family:'Courier New', Courier, monospace ;
+        position:relative;
+    }
+    
+    .loginButton:hover {
+    background-color: rgb(160, 156, 149);
+    color: white;
+    }
+    
+    .demoButton {
+        background-color:rgb(68, 64, 64); ;
+        border: 0px;
+        color: rgba(204, 137, 13, 0.808);
+        font-size: 0.5em;
+    }
+    
+    .demoButton:hover {
+        color: rgba(224, 147, 3, 0.973)
+    }
+    
+    .loginImg {
+        display:block;
+        position: relative;
+        float:left;
+        width:100%;
+       
+        
+        opacity: 0.3;
+        height:800px;
+        
+    }
     .upperBar {
         display: flex;
         flex-direction: column;
@@ -803,14 +999,9 @@ a:hover {
        
     }
     
-    
-    
-    
     .proImg {
         height: 3em;
         width:3em;
-      
-       
         border-radius: 40px;
     }
     
@@ -1031,4 +1222,81 @@ a:hover {
       .comment_amount {
         text-align: left;
       }
+
+      
+      .FeedPage {
+        background-color: #69676b;
+        border-radius: 10px;
+        
+        margin-left: auto;
+        margin-right: auto;
+        width:100%;
+    }
+    
+    .userPage {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5em;
+        border-radius:4em ;
+        padding:2em;
+        width:85%;
+        color:white;
+        background-color: #69676b;
+        
+      }
+      .userBioImg {
+        display: flex;
+        flex-direction: row;
+        column-gap: 1em;
+      }
+      
+      
+      .secondPart {
+        margin-left: auto;
+        margin-right: auto;
+        
+        text-align: center;
+      }
+      .username {
+        font-size: 1.5em;
+      }
+      .bioResult {
+        font-size: 1em;
+      }
+      
+      .pageProfile {
+        height: 5em;
+        width: 5em;
+        border-radius: 15em;
+      }
+      
+     
+      
+      .postForm {
+        border: 2px solid green;
+        margin-left: auto;
+        margin-right:auto;
+        width:100%;
+      }
+    
+      .postType {
+        border: 2px solid blue;
+      }
+    
+      .follow {
+       
+        margin-top: 1%;
+        margin-bottom:auto;
+        background-color: rgb(106, 101, 92);
+        font-size: 1em;
+        font-family:'Courier New', Courier, monospace  ;
+        color:white;
+        border: 2px solid rgba(204, 137, 13, 0.808);
+        border-radius: 100px;
+      }
+    
+      .follow:hover {
+        background-color: rgb(121, 119, 114);
+        color: rgba(224, 147, 3, 0.973);
+    }
   }
