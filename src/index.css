@@ -854,14 +854,15 @@ a:hover {
         border-top: 0;
         border-bottom: 0;
         border-left: 0;
-    
+        
         
         
     }
 
     .searchBar > label > input {
-        margin-top: -5;
+        margin-top: 0;
         width: 15%;
+      
     }
 
     .searchResult > ul {
@@ -871,16 +872,15 @@ a:hover {
         display: flex;
         list-style-type: none;
         flex-direction: column;
-        position: absolute;
+        position: relative;
         
     }
     
     .eachSearch {
         
-        margin-top: 55%;
-      
+        margin-top: 0%;
         border-top: 1px solid rgb(68,64,64);
-       
+        position: relative;
     }
     
      .top {
@@ -888,7 +888,7 @@ a:hover {
         flex-direction: row;
         width: 10em;
         justify-content: space-between;
-        margin-top: 10%;
+        margin-top: 1%;
     
         
     }
