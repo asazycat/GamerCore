@@ -937,14 +937,14 @@ a:hover {
     }
     .upperBar {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         
         border: 2px solid rgb(68, 64, 64);
-        border-width: 2px;
+        border-width: 0;
         border-top: 0;
         border-left: 0;
         border-right: 0;
-        justify-content: space-around;
+        
        width:100%;
       
     }
@@ -954,16 +954,18 @@ a:hover {
     
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-      
+        position: ab;
        width:100%;
+        margin-left: 0;
+       padding-left:0;
     
     }
     
     .upperBar .navigation > li {
         font-size: 1em;
         list-style-type: none;
-        padding: 1em 2em;
+        padding:0;
+        padding-top: 2em;
         margin-top: 0;
         margin-bottom: 0;
         position: relative;
@@ -975,8 +977,10 @@ a:hover {
         border-top: 0;
         border-left: 0;
         border-right: 0;
-        margin-left: -10%;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
+        width: 100%;
     }
     
     .upperBar .navigation > li:hover {
@@ -984,32 +988,44 @@ a:hover {
         color:rgba(224, 147, 3, 0.973)
     }
     .userProfile {
+     
         display: flex;
         flex-direction: row;
-        margin-right: auto;
-        margin-left: auto;
-       margin-top: 0;
-       padding-top:-20px;
-      
+        padding: 0;
+       width: 100%;
+       background-color: #313131;
+       justify-content: space-between;
         
     } 
+
+    .proNameProfile {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
     .userProfile .userName {
-        font-size: 0.75em;
+        font-size: 1em;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-       
+       padding: 15px
     }
     
     .proImg {
         height: 3em;
         width:3em;
         border-radius: 40px;
+        margin-top: auto;
+        position: relative;
     }
     
     .signOut {
         border: 0;
         background-color: rgb(141, 137, 130);
-        font-size: 0.5em;
+        font-size: 0.75em;
         font-family:'Courier New', Courier, monospace  ;
+        margin-top: auto;
+        margin-bottom: auto;
+        border-radius:20px;
+        
     }
     .signOut:hover {
         background-color: rgb(160, 156, 149);
@@ -1045,7 +1061,8 @@ a:hover {
         border-top: 0;
         border-bottom: 0;
         border-left: 0;
-        
+        margin-left: auto;
+        margin-right: auto;
         
         
     }
