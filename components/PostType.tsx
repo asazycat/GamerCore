@@ -2,6 +2,7 @@ import {useState,useContext,useEffect, FormEvent} from 'react'
 import { collection, addDoc, doc , getDoc} from "firebase/firestore"; 
 import { LoginContext } from '../context/LoginContext'
 import db from "../src/firebase"
+import { Link } from 'react-router-dom';
 export default function PostType (props: {active: string}) {
 
 
@@ -41,6 +42,7 @@ export default function PostType (props: {active: string}) {
         
         ,[loginInitials.id])
      const handleSubmit =  async (e: FormEvent<HTMLFormElement>) => {
+      
            
         e.preventDefault()
         if (active === 'discussionForm') {
@@ -66,12 +68,12 @@ export default function PostType (props: {active: string}) {
     {
         return (
         <div className="discussionForm">
-            <form onSubmit={e =>  {handleSubmit(e)}}>
-        <label>title<textarea value={title} onChange={e=> setTitle(e.target.value)}></textarea></label>
+            <form onSubmit={e =>  handleSubmit(e)}>
+        <div className='formEle'><label><textarea  value={title} onChange={e=> setTitle(e.target.value)} className='title' ></textarea></label></div>
         
-        <label>discussion<textarea value={text} onChange={e=> setText(e.target.value)}></textarea></label>
+        <div className='formEle'><label><textarea value={text} onChange={e=> setText(e.target.value)} className='discussion'></textarea></label></div>
         
-        <button type='submit' >Share Post</button>
+        <Link to="/feed"><div className='shareSubmitButton'><button type='submit' className='share'>Share</button></div></Link>
         </form>
         </div>)
     }
@@ -81,7 +83,7 @@ export default function PostType (props: {active: string}) {
             <h1>Video</h1>
         <form onSubmit={e => handleSubmit(e)}>
    
-    
+        
     <button type='submit'>Share Post</button>
     </form>
     </div>

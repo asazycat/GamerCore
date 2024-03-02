@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react"
-
+import { useEffect, useState, useContext } from "react"
+import { LoginContext } from "../context/LoginContext"
 import EachFeed from "./EachFeed"
-import {sortByMap} from "../util/util"
+import {sortByMap, filterByMap} from "../util/util"
 import db from "../src/firebase"
 import { Link } from "react-router-dom"
 import { getDocs, collection } from "firebase/firestore"
@@ -11,7 +11,9 @@ import {IComments, IFeed} from '../interfaces/interfaces'
 
 export default function Feed () {
   
+    const {loginInitials} = useContext(LoginContext)
     const [selectedSortBy, setselectedSortBy] = useState("date")
+    const [selectedFilterBy, setselectedFilterBy] = useState("")
 const [feed, setFeed] = useState<IFeed[]>([])
 
     useEffect(()=> {
@@ -38,7 +40,7 @@ const [feed, setFeed] = useState<IFeed[]>([])
             setFeed(docs)
         }) ()
         
-    },[])
+    },[selectedFilterBy])
       
       
       
@@ -70,12 +72,10 @@ const [feed, setFeed] = useState<IFeed[]>([])
             <div className="filter">
             <label>
                 Filter:
-                <select name="filter" defaultValue="">
+                <select name="filter" value={selectedFilterBy} onChange={e=> setselectedFilterBy(e.target.value)}>
                     <option value="" ></option>
                     <option value="following" >Following</option>
                     <option value="voted" >Upvoted</option>
-                    <option value="voted" >Video/Img</option>
-                    <option value="voted" >Discussion</option>
                 </select>
                
             </label>
@@ -89,7 +89,10 @@ const [feed, setFeed] = useState<IFeed[]>([])
             <div className="feedList">
                
             {
-            sortByMap(feed, selectedSortBy).map((eachFeed:{
+            
+            
+            
+            filterByMap(sortByMap(feed, selectedSortBy), selectedFilterBy, loginInitials.id).map((eachFeed:{
                 Feed_Id: string,
                 user: string,
                 post_title: string,
@@ -98,10 +101,10 @@ const [feed, setFeed] = useState<IFeed[]>([])
                 comments: IComments[],
                 date: string,
                 media_type: string
-                
             }) => {return <EachFeed eachFeed={eachFeed} key={eachFeed.Feed_Id}/>
-            } )
-            }
+            })
+             }
+            
              
             </div>
            

@@ -26,7 +26,7 @@ export default function User () {
 
     useEffect((()=> {
       
-     console.log('render')
+    
       if (user_id === undefined) {
         setId(loginInitials.id)
     } else

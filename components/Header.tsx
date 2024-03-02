@@ -24,7 +24,7 @@ export default function Header () {
                 <li><Link to="/Feed">Feed</Link></li>
                 <li><Link to="/LFG">LFG</Link></li>
                 <li>Clubs</li>
-                <li>Stream</li>
+                <li><Link to="/">Stream</Link></li>
                 
             </ul>
         

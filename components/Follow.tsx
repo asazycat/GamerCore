@@ -8,10 +8,10 @@ import db from "../src/firebase"
 export default function Follow (props: {id:string}) {
 
     const {id} = props
-  
+   
     const {loginInitials} = useContext(LoginContext)
     const [newFollowers, setNewFollowers] = useState([])
-    
+    const [newFollowing, setNewFollowing] = useState([])
 
     const addfollower = async () => {
       
@@ -20,18 +20,22 @@ export default function Follow (props: {id:string}) {
       
            if (data !== undefined)
         {
-            console.log(data)
+          
         const followers = data.followers
-        console.log(followers)
+        const following = data.following
         if (followers.includes(loginInitials.id))
         {
             const deleFollower =  followers.filter((element: string) => element !== loginInitials.id)
             setNewFollowers(deleFollower)
+            const deleFollowing = following.filter((element:string)=> element !== id)
+            setNewFollowing(deleFollowing)
         }
         else {
          
         followers.push(loginInitials.id)
         setNewFollowers(followers)
+        following.push(id)
+        setNewFollowing(following)
         }
     
     }
@@ -41,16 +45,20 @@ export default function Follow (props: {id:string}) {
        
         
     
-        console.log('through')
         const docRef = doc(db, "users",  id)
      
         updateDoc(docRef, {
            
-            
+           
             followers: newFollowers,
            
         })
-    }, [newFollowers])
+    
+        updateDoc(doc(db, "users",  loginInitials.id), {
+            following: newFollowing
+        })
+    
+    }, [newFollowers,newFollowing])
 
 
    

@@ -1,5 +1,42 @@
 import { IComments } from "../interfaces/interfaces"
 
+
+export function filterByMap (arr1: {
+                Feed_Id: string,
+                user: string,
+                post_title: string,
+                post_content: string,
+                votes: string[],
+                comments: IComments[],
+                date:  string,
+                 media_type:string
+            } [],
+                filterBy:string, user_id:string)
+    {
+        console.log(arr1, filterBy)
+
+        switch (filterBy) {
+         
+            case 'voted':
+                return  arr1.filter(element=> element.votes.includes(user_id))
+                break;
+            
+                
+            case 'following':
+                arr1.filter(element=> element.votes.includes)
+                break;
+            default:
+                return arr1
+        }
+        return []
+    }
+
+
+
+
+
+
+
 export function sortByMap (arr1: {
                 Feed_Id: string,
                 user: string,
