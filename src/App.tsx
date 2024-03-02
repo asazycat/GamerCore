@@ -12,7 +12,7 @@ import Login from '../components/Login.tsx'
 import Post from '../components/Post.tsx'
 import Followers from '../components/Followers.tsx'
 import FeedPage from '../components/FeedPage.tsx'
-import Stream from '../components/Stream.tsx'
+// import Stream from '../components/Stream.tsx'
 function App() {
  
  const [login, setLogin] = useState(false)
