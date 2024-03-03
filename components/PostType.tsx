@@ -68,6 +68,7 @@ export default function PostType (props: {active: string}) {
     {
         return (
         <div className="discussionForm">
+            <h1 className='head'>Feed</h1>
             <form onSubmit={e =>  handleSubmit(e)}>
         <div className='formEle'><label><textarea  value={title} onChange={e=> setTitle(e.target.value)} className='title' ></textarea></label></div>
         
@@ -79,12 +80,12 @@ export default function PostType (props: {active: string}) {
     }
     else {
         return (
-        <div className="videoImg">
-            <h1>Video</h1>
+        <div className="createLFG">
+            <h1 className='head'>LFG</h1>
         <form onSubmit={e => handleSubmit(e)}>
    
         
-    <button type='submit'>Share Post</button>
+    <div className='shareSubmitButton'><button type='submit' className='share'>Post LFG</button></div>
     </form>
     </div>
         )

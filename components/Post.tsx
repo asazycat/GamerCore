@@ -13,7 +13,7 @@ export default function Post () {
         <div className="postForm">
             <div className="postType">
            <label><button value='discussion' onClick={e => postValue(e)} className='share'>Discussion</button></label>
-           <label><button value='video/Img' onClick={e => postValue(e)} className="share">Vid/Img</button></label>
+           <label><button value='LFG' onClick={e => postValue(e)} className="share">LFG</button></label>
            </div>
            <PostType active={active} />
         </div>

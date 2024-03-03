@@ -437,8 +437,13 @@ a:hover {
     border-top-left-radius: 2em;
     border-top-right-radius: 2em;
   }
-
-  .discussionForm {
+  .head {
+    color:rgb(160, 156, 149);
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
+        font-size: 250%;
+        text-align: center;
+  }
+  .discussionForm , .createLFG{
     background-color:rgb(22, 22, 22,0.5);
     display: flex;
     flex-direction: column;
@@ -479,6 +484,62 @@ a:hover {
     .shareSubmitButton {
         text-align: center;
     }
+
+    .platform {
+  
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 150%;
+        color:rgb(160, 108, 12);
+        background-color:#313131;
+        padding: 0.5em;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+    }
+
+     .LFGButton {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 150%;
+        width:75%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color:#313131;
+        padding: 0.5em;
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+
+     }
+     .searchGame {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: aliceblue;
+     }
+
+    .LFG {
+        padding: 2em;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width:75%;
+        margin-left: auto;
+        margin-right: auto;
+        
+        gap:2%;
+    }
+
+    .eachLFG {
+      
+        font-size: 100%;
+        background-color: #69676b;
+        padding: 1em;
+        border-radius: 2em;
+    }
+
 
   .follow {
    
@@ -921,7 +982,8 @@ a:hover {
         border-top-left-radius: 2em;
         border-top-right-radius: 2em;
       }
-      .discussionForm {
+
+      .discussionForm , .createLFG{
         background-color:rgb(22, 22, 22,0.5);
         display: flex;
         flex-direction: column;
@@ -1416,7 +1478,7 @@ a:hover {
         border-top-left-radius: 2em;
         border-top-right-radius: 2em;
       }
-      .discussionForm {
+      .discussionForm , .createLFG{
         background-color:rgb(22, 22, 22,0.5);
         display: flex;
         flex-direction: column;
@@ -1457,6 +1519,10 @@ a:hover {
         .shareSubmitButton {
             text-align: center;
         }
+
+      
+
+
       .follow {
        
         margin-top: 1%;

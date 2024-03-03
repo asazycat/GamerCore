@@ -163,3 +163,15 @@ export function getUserDetails ( arr1: {
     } 
 
 
+export function platformFilter (arr1: {
+    LFG_id:string,
+    LFG_Poster:string,
+    LFG_title:string,
+    Platform: string,
+    Game: string,
+    LFG_description: string,
+    LFG_tags: string[]
+}[], platform:string) {
+    if (platform === "") {return arr1}
+    return arr1.filter((element)=> element.Platform === platform)
+}

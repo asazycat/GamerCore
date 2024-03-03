@@ -12,6 +12,7 @@ import Login from '../components/Login.tsx'
 import Post from '../components/Post.tsx'
 import Followers from '../components/Followers.tsx'
 import FeedPage from '../components/FeedPage.tsx'
+
 // import Stream from '../components/Stream.tsx'
 function App() {
  
@@ -32,6 +33,7 @@ return (
   <Route path="/feed" element={<Feed />} />
   <Route path="/LFG" element={<LFG />} />
   <Route path=":user_id" element={<User/>} />
+  <Route path="/post" element={<Post/>} />
   <Route path="/post" element={<Post/>} />
   {/* <Route path="/Stream" element={<Stream/>}/> */}
   </Routes>
