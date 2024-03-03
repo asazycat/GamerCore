@@ -51,6 +51,8 @@ Here is a list of the features that I have added so far:
 
 Features I would like to include:
 
+- Form validation and some responsive design modifications  
+
 - The ability to see streams of popular twitch streamers (using twitch api)
 
 - A sign up page for new users to get in (at the moment, it is just a demo account)
