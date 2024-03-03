@@ -501,7 +501,23 @@ a:hover {
         border-top-left-radius: 1em;
         border-top-right-radius: 1em;
     }
-
+    .platformGame {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+  
+    }
+    .game {
+        resize: none;
+        
+        height:1.25em;
+        
+        font-size: 1em;
+        background-color:#313131;
+        
+        color: aliceblue;
+    
+      }
      .LFGButton {
         display: flex;
         flex-direction: row;

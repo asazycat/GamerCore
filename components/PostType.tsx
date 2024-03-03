@@ -15,6 +15,8 @@ export default function PostType (props: {active: string}) {
     const [text, setText] = useState('')
     const [title, setTitle] = useState('')
     const [user, setUser] = useState({username:''})
+    const [platform, setPlatform] = useState('')
+    const [game, setGame] = useState('')
         const addDate = new Date()
         const theDate = addDate.toDateString()
 
@@ -62,8 +64,8 @@ export default function PostType (props: {active: string}) {
             await addDoc( collection(db, 'lfg'), {
                 LFG_Poster:user.username,
                 LFG_title:title,
-                // Platform: string,
-                // Game: string,
+                Platform: platform,
+                Game: game,
                 LFG_description: text,
                 // LFG_tags: string[]
             })
@@ -90,6 +92,22 @@ export default function PostType (props: {active: string}) {
         <div className="createLFG">
             <h1 className='head'>LFG</h1>
         <form onSubmit={e => handleSubmit(e)}>
+        <div className='platformGame'>
+       
+                
+       <div> <select name="platform" className='platformSelect' onChange={e=> setPlatform(e.target.value)}>
+            <option value="xbox">Xbox</option>
+            <option value="Playstation">Playstation</option>
+            <option value="PC">PC</option>
+            <option value="All">All</option>
+        </select>
+        </div>
+
+        <div><label><textarea  value={game} onChange={e=> setGame(e.target.value)} className='game' ></textarea></label></div>
+       
+        </div>
+
+
         <div className='formEle'><label><textarea  value={title} onChange={e=> setTitle(e.target.value)} className='title' ></textarea></label></div>
         
         <div className='formEle'><label><textarea value={text} onChange={e=> setText(e.target.value)} className='discussion'></textarea></label></div>
