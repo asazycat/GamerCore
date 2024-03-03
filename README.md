@@ -92,4 +92,4 @@ Here is the hosted link if you're curious: https://gamercore-ec2e2.web.app/
 
 
 
-gamercore-ec2e2.web.app
+
