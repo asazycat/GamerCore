@@ -13,7 +13,7 @@ export function filterByMap (arr1: {
             } [],
                 filterBy:string, user_id:string)
     {
-        console.log(arr1, filterBy)
+       
 
         switch (filterBy) {
          

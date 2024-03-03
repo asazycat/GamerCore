@@ -2,7 +2,7 @@ import {useState,useContext,useEffect, FormEvent} from 'react'
 import { collection, addDoc, doc , getDoc} from "firebase/firestore"; 
 import { LoginContext } from '../context/LoginContext'
 import db from "../src/firebase"
-import { Link } from 'react-router-dom';
+
 export default function PostType (props: {active: string}) {
 
 
@@ -42,15 +42,12 @@ export default function PostType (props: {active: string}) {
         
         ,[loginInitials.id])
      const handleSubmit =  async (e: FormEvent<HTMLFormElement>) => {
-      
-           
+     
         e.preventDefault()
         if (active === 'discussionForm') {
             setMedia('Discussion')
-        }
-        else {
-            setMedia('Vid/Img')
-        }
+        
+    
          await addDoc( collection(db, 'feed'), {
                 user: user.username,
                 post_title: title,
@@ -60,7 +57,17 @@ export default function PostType (props: {active: string}) {
                 date: theDate,
                 media_type: media
             })
-           
+        }
+        else {
+            await addDoc( collection(db, 'lfg'), {
+                LFG_Poster:user.username,
+                LFG_title:title,
+                // Platform: string,
+                // Game: string,
+                LFG_description: text,
+                // LFG_tags: string[]
+            })
+        }
      }
     
 
@@ -74,7 +81,7 @@ export default function PostType (props: {active: string}) {
         
         <div className='formEle'><label><textarea value={text} onChange={e=> setText(e.target.value)} className='discussion'></textarea></label></div>
         
-        <Link to="/feed"><div className='shareSubmitButton'><button type='submit' className='share'>Share</button></div></Link>
+        <div className='shareSubmitButton'><button type='submit' className='share'>Share</button></div>
         </form>
         </div>)
     }
@@ -83,7 +90,9 @@ export default function PostType (props: {active: string}) {
         <div className="createLFG">
             <h1 className='head'>LFG</h1>
         <form onSubmit={e => handleSubmit(e)}>
-   
+        <div className='formEle'><label><textarea  value={title} onChange={e=> setTitle(e.target.value)} className='title' ></textarea></label></div>
+        
+        <div className='formEle'><label><textarea value={text} onChange={e=> setText(e.target.value)} className='discussion'></textarea></label></div>
         
     <div className='shareSubmitButton'><button type='submit' className='share'>Post LFG</button></div>
     </form>
