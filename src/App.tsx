@@ -13,7 +13,7 @@ import Post from '../components/Post.tsx'
 import Followers from '../components/Followers.tsx'
 import FeedPage from '../components/FeedPage.tsx'
 
-// import Stream from '../components/Stream.tsx'
+import Stream from '../components/Stream.tsx'
 function App() {
  
  const [login, setLogin] = useState(false)
@@ -35,7 +35,7 @@ return (
   <Route path=":user_id" element={<User/>} />
   <Route path="/post" element={<Post/>} />
   <Route path="/post" element={<Post/>} />
-  {/* <Route path="/Stream" element={<Stream/>}/> */}
+  <Route path="/Stream" element={<Stream/>}/>
   </Routes>
 
    </div >
