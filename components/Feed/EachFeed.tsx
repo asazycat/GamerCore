@@ -1,5 +1,5 @@
-import Votes from "./Votes"
-import { IComments } from "../interfaces/interfaces"
+import Votes from ".././Votes"
+import { IComments } from "../../interfaces/interfaces"
 import { Link } from "react-router-dom"
 export default function EachFeed (props:{
     eachFeed: { 

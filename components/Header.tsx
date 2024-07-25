@@ -1,8 +1,8 @@
-import SearchBar from "./SearchBar";
-import Profile from "./Profile"
+import SearchBar from "./Search/SearchBar";
+import Profile from "./Profile/Profile"
 import {Link } from 'react-router-dom';
-import Sidebar from "./Sidebar";
-import SearchResult from "./SearchResult";
+import Sidebar from "./SiderBar/Sidebar";
+import SearchResult from "./Search/SearchResult";
 import { useState } from 'react';
 
 export default function Header () {

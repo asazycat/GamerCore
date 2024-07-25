@@ -1,7 +1,7 @@
 
 
 import { useEffect, useState } from "react"
-import api from "../src/api"
+import api from "../../src/api"
 export default function ListOfStreamsLive () {
    const [thumbnail, setThumbnail] = useState<string>('')
    

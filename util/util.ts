@@ -1,5 +1,6 @@
 import { IComments } from "../interfaces/interfaces"
-
+// import firebase from "../src/firebase";
+// import db from "../src/firebase"
 
 export function filterByMap (arr1: {
                 Feed_Id: string,

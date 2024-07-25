@@ -1,11 +1,11 @@
 
 import { useState,useEffect } from "react"
-import EachLFG from "./EachLFG"
+import EachLFG from "./EachLFG.tsx"
 
-import {platformFilter} from '../util/util'
+import {platformFilter} from '../../util/util.ts'
 import { Link } from "react-router-dom"
-import db from "../src/firebase"
-import { ILFG } from "../interfaces/interfaces.ts"
+import db from "../../src/firebase.ts"
+import { ILFG } from "../../interfaces/interfaces.ts"
 import { getDocs, collection} from "firebase/firestore"
 export default function LFG () {
 

@@ -1,10 +1,10 @@
 import { useEffect, useState , useContext} from "react"
-import { LoginContext } from "../context/LoginContext"
+import { LoginContext } from "../../context/LoginContext"
 import { getDoc , doc} from "firebase/firestore"
-import db from '../src/firebase'
+import db from '../../src/firebase'
 import { useParams } from "react-router-dom"
-import { IFeedPage } from "../interfaces/interfaces"
-import Comments from "./Comments"
+import { IFeedPage } from "../../interfaces/interfaces"
+import Comments from "../Comments/Comments"
 export default function FeedPage () {
 
 

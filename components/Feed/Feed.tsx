@@ -1,11 +1,11 @@
 import { useEffect, useState, useContext } from "react"
-import { LoginContext } from "../context/LoginContext"
+import { LoginContext } from "../../context/LoginContext"
 import EachFeed from "./EachFeed"
-import {sortByMap, filterByMap} from "../util/util"
-import db from "../src/firebase"
+import {sortByMap, filterByMap} from "../../util/util"
+import db from "../../src/firebase"
 import { Link } from "react-router-dom"
 import { getDocs, collection } from "firebase/firestore"
-import {IComments, IFeed} from '../interfaces/interfaces'
+import {IComments, IFeed} from '../../interfaces/interfaces'
 
 
 

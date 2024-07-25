@@ -4,17 +4,17 @@ import { Routes, Route } from 'react-router-dom'
 import './App.css'
 
 import Header from '../components/Header'
-import Feed from '../components/Feed'
-import LFG from '../components/LFG'
-import User from '../components/User'
+import Feed from '../components/Feed/Feed.tsx'
+import LFG from '../components/LFG/LFG.tsx'
+import User from '../components/Profile/User.tsx'
 import { useState } from 'react';
-import Inbox from '../components/Inbox.tsx'
+import Inbox from '../components/SiderBar/Inbox.tsx'
 import Login from '../components/Login.tsx'
 import Post from '../components/Post.tsx'
-import Followers from '../components/Followers.tsx'
-import FeedPage from '../components/FeedPage.tsx'
+import Followers from '../components/Follow/Followers.tsx'
+import FeedPage from '../components/Feed/FeedPage.tsx'
 
-import Stream from '../components/Stream.tsx'
+import Stream from '../components/SiderBar/Stream.tsx'
 function App() {
  
  const [login, setLogin] = useState(false)

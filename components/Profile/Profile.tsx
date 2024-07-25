@@ -1,11 +1,11 @@
-import { LoginContext } from "../context/LoginContext"
+import { LoginContext } from "../../context/LoginContext"
 import { useContext, useEffect,useState } from "react"
 import { getAuth,signOut   } from "firebase/auth";
-import { IProfile } from "../interfaces/interfaces";
+import { IProfile } from "../../interfaces/interfaces";
 import { Link } from "react-router-dom"
 
 import { doc, getDoc } from "firebase/firestore";
-import db from "../src/firebase"
+import db from "../../src/firebase"
 
 
 

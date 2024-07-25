@@ -20,17 +20,17 @@ export default function Votes (props:{
 
     const newVotes = [...eachFeed.votes]
     const [displayVote, setDisplayVote] = useState(eachFeed.votes.length)
-    const [state, setState] = useState(newVotes)
+    const [votes, setVotes] = useState(newVotes)
     const {loginInitials} = useContext(LoginContext)
  
         function upvote() {
             
         
-                if (state.includes(loginInitials.id))
+                if (votes.includes(loginInitials.id))
                 {
                     
                     const deleVotes =  newVotes.filter((element) => element !== loginInitials.id)
-                    setState(deleVotes)
+                    setVotes(deleVotes)
                   
                     setDisplayVote(deleVotes.length)
                 }
@@ -38,7 +38,7 @@ export default function Votes (props:{
                 
                     newVotes.push(loginInitials.id)
                     setDisplayVote(newVotes.length)
-                    setState(newVotes)
+                    setVotes(newVotes)
                
                 }
                 
@@ -57,9 +57,9 @@ export default function Votes (props:{
             post_content:eachFeed.post_content,
             comments:eachFeed.comments,
             date:eachFeed.date,
-            votes: state
+            votes: votes
         })
-    }, [displayVote, eachFeed.Feed_Id, eachFeed.comments, eachFeed.date, eachFeed.post_content, eachFeed.post_title, eachFeed.user, state])
+    }, [displayVote, eachFeed.Feed_Id, eachFeed.comments, eachFeed.date, eachFeed.post_content, eachFeed.post_title, eachFeed.user, votes])
 
 
 

@@ -1,8 +1,8 @@
 
 import { useEffect, useContext,useState } from "react"
-import { LoginContext } from "../context/LoginContext"
+import { LoginContext } from "../../context/LoginContext"
 import { doc, updateDoc,getDoc } from "firebase/firestore"
-import db from "../src/firebase"
+import db from "../../src/firebase"
 
 
 export default function Follow (props: {id:string}) {

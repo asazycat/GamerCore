@@ -1,5 +1,5 @@
 
-import ListOfStreamsLive from "./ListOfStreamsLive";
+import ListOfStreamsLive from "./ListOfStreamsLive"
 
 
 export default function Stream () {

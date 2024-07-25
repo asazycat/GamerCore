@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom"
-import Follow from "./Follow";
+import Follow from "../Follow/Follow.tsx";
 import {  useContext, useEffect, useState } from "react"
-import { LoginContext } from "../context/LoginContext"
+import { LoginContext } from "../../context/LoginContext.tsx"
 import { doc, getDoc } from "firebase/firestore";
-import db from "../src/firebase"
+import db from "../../src/firebase.ts"
 
 
 
