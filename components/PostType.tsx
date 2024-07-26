@@ -95,7 +95,7 @@ export default function PostType (props: {active: string}) {
         <div className='platformGame'>
        
                 
-       <div> <select name="platform" className='platformSelect' onChange={e=> setPlatform(e.target.value)}>
+       <div> Platform<select name="platform" className='platformSelect' onChange={e=> setPlatform(e.target.value)}>
             <option value="xbox">Xbox</option>
             <option value="Playstation">Playstation</option>
             <option value="PC">PC</option>
@@ -103,7 +103,7 @@ export default function PostType (props: {active: string}) {
         </select>
         </div>
 
-        <div><label><textarea  value={game} onChange={e=> setGame(e.target.value)} className='game' ></textarea></label></div>
+        <div>Game<label><textarea  value={game} onChange={e=> setGame(e.target.value)} className='game' ></textarea></label></div>
        
         </div>
 
