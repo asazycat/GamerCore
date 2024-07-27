@@ -1,10 +1,11 @@
 import { useEffect, useState , useContext} from "react"
 import { LoginContext } from "../../context/LoginContext"
-import { getDoc , doc} from "firebase/firestore"
-import db from '../../src/firebase'
+
 import { useParams } from "react-router-dom"
 import { IFeedPage } from "../../interfaces/interfaces"
+import { FeedPageC } from "./FeedClass"
 import Comments from "../Comments/Comments"
+import getFeedPage from "../../util/asyncFunctions"
 export default function FeedPage () {
 
 
@@ -22,35 +23,21 @@ export default function FeedPage () {
         media_type:''
     })
 
-    useEffect(()=> {
-        if (Feed_Id != undefined)
-        {
-            setPostId(Feed_Id)
-        }
-        const docRef = doc(db, 'feed', postId)
-        getDoc(docRef).then((doc) => {
-            if (doc.exists()) {
-      
-                const data  = doc.data()
-               
-               setFeedPage(
-                {
-                    user: data.user,
-                    post_title: data.post_title,
-                    post_content:data.post_content,
-                    votes: data.votes,
-                    comments: data.comments,
-                    media_type:data.media_type,
-                    date: data.date
+    useEffect(()=> 
+    {
+    if (Feed_Id != undefined){setPostId(Feed_Id)}
 
-                }
-               )
-               
-              } else {
-               
-                console.log("No such document!");
-              }
-        })
+        (async() => 
+            {
+            const document = await getFeedPage(postId)
+            if (document.exists()) 
+                {
+                const data  = document.data();
+                const FeedPage = new FeedPageC(data.user,data.post_title,data.post_content,data.votes,data.comments,data.date,data.media_type);
+                setFeedPage(FeedPage)
+            } else {console.log("No such document!")}
+            } 
+        )()       
     }, [Feed_Id, loginInitials.id, postId])
     return (
         <div className="FeedPage">
@@ -62,5 +49,7 @@ export default function FeedPage () {
          <p className="feedDate">{feedPage.date}</p>
         <Comments id={postId} />
          </div>
-    )
+            )
 }
+
+

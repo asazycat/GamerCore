@@ -25,7 +25,7 @@ export default function ListOfComments (props: {id:string}) {
     return (
 
        <ul>{ commentList.map((eachComment )=> { 
-        console.log(eachComment)
+        
         return <li>{eachComment.commentText}</li>
     })}
     </ul>
