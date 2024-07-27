@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react"
 import { LoginContext } from "../../context/LoginContext"
 import EachFeed from "./EachFeed"
 import {sortByMap, filterByMap} from "../../util/util"
-import {FeedC} from "./FeedClass"
+import {FeedC} from "../../classes/FeedClass"
 import { Link } from "react-router-dom"
 import {IFeed} from '../../interfaces/interfaces'
 import {getFeed} from '../../util/asyncFunctions'

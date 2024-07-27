@@ -3,7 +3,7 @@ import { LoginContext } from "../../context/LoginContext"
 
 import { useParams } from "react-router-dom"
 import { IFeedPage } from "../../interfaces/interfaces"
-import { FeedPageC } from "./FeedClass"
+import { FeedPageC } from "../../classes/FeedClass"
 import Comments from "../Comments/Comments"
 import getFeedPage from "../../util/asyncFunctions"
 export default function FeedPage () {
