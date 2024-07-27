@@ -13,7 +13,8 @@ export default function FeedPage () {
     const {Feed_Id} = useParams()
     const {loginInitials} = useContext(LoginContext)
     const [postId, setPostId] = useState(loginInitials.id)
-    const [feedPage, setFeedPage] = useState<IFeedPage>({
+    const [feedPage, setFeedPage] = useState<IFeedPage>(
+        {
         post_title:'',
         post_content:'',
         comments:[],
@@ -21,7 +22,7 @@ export default function FeedPage () {
         date:'',
         user: '',
         media_type:''
-    })
+        })
 
     useEffect(()=> 
     {
@@ -41,14 +42,12 @@ export default function FeedPage () {
     }, [Feed_Id, loginInitials.id, postId])
     return (
         <div className="FeedPage">
-       <h1 className="postTitle">{feedPage.post_title}</h1> 
+         <h1 className="postTitle">{feedPage.post_title}</h1> 
          <p className="userPost">{feedPage.user}</p>
          <p className="postContent">{feedPage.post_content}</p>
-        
-        
          <p className="feedDate">{feedPage.date}</p>
-        <Comments id={postId} />
-         </div>
+         <Comments id={postId} />
+        </div>
             )
 }
 
