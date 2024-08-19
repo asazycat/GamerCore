@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 
 import './App.css'
 
-import Header from '../components/Header'
+import Header from '../components/Header/Header.tsx'
 import Feed from '../components/Feed/Feed.tsx'
 import LFG from '../components/LFG/LFG.tsx'
 import User from '../components/Profile/User.tsx'

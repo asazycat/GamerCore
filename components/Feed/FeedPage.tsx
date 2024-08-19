@@ -35,8 +35,9 @@ export default function FeedPage () {
                 {
                 const data  = document.data();
                 const FeedPage = new FeedPageC(data.user,data.post_title,data.post_content,data.votes,data.comments,data.date,data.media_type);
+                
                 setFeedPage(FeedPage)
-            } else {console.log("No such document!")}
+            } else {console.log()}
             } 
         )()       
     }, [Feed_Id, loginInitials.id, postId])

@@ -42,3 +42,39 @@ export class FeedPageC implements IFeedPage {
         this.media_type = media_type;
     }
 }
+
+
+
+export class Comment implements IComments {
+    comment_id: number
+    commentText: string
+    date:string
+    commentVotes:number
+
+    constructor(comment_id:number,commentText:string,date:string, commentVotes:number) {
+        this.comment_id = comment_id;
+        this.commentText =commentText;
+        this.date = date;
+        this.commentVotes = commentVotes;
+    }
+}
+
+
+export class CommentsC  {
+    comments: IComments[];
+    constructor(comments: IComments[]) {
+        this.comments = comments
+    }
+    
+
+    newComment(comment_id:number,commentText:string,date:string, commentVotes:number) {
+        const c = new Comment(comment_id,commentText,date, commentVotes)
+        this.comments.push(c);
+        return c;
+    }
+
+    get CommentLength() {
+        return this.comments.length
+    }
+
+}

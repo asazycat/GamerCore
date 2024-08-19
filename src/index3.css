@@ -1,4 +1,5 @@
-
+@import url("../components/Header/header.css");
+@import url("../components/Search/search.css");
 body {
     background-color: rgb(26, 24, 24);
 }
@@ -62,40 +63,6 @@ color: white;
 }
 
 
-.upperBar {
-    display: flex;
-    flex-direction: row;
-    border-style: double;
-    border-color: rgb(68, 64, 64);
-    border-width: 10px;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    justify-content: space-around;
-   max-width:100%;
-  
-}
-
-.upperBar  .navigation {
-    
-    display: flex;
-    flex-direction: row;
-    
-   
-
-}
-
-.upperBar .navigation > li {
-    font-size: 2em;
-    list-style-type: none;
-    padding: 1em 2em;
-    margin-top: 0;
-    margin-bottom: 0;
-    position: relative;
-    color:white;
-    font-family: 'Courier New', Courier, monospace;
-    text-decoration: none;
-}
 
 
 .userProfile {
@@ -133,41 +100,6 @@ color: white;
     background-color: rgb(160, 156, 149);
     color: white;
 }
-.searchBar {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display:inline;
-    position: relative; 
-   padding: 5px;
-    font-size: 1.0em;
-    color:white;
-    height:50%;
-    top: 50px;
-    border-style: double;
-    border-color: rgb(68, 64, 64);
-    border-width: 5px;
-    border-top: 0;
-    border-bottom: 0;
-    border-left: 0;
-    
-}
-.searchResult > ul {
-    
-    display: inline;
-   text-align: left;
-    display: flex;
-    list-style-type: none;
-    flex-direction: column;
-    position: absolute;
-    
-}
-
-.eachSearch {
-    
-    margin-top: 55%;
-    font-size: 1em;
-    border-top: 1px solid rgb(68,64,64);
-   
-}
 
  .top {
     display: flex;
@@ -178,9 +110,7 @@ color: white;
 
     
 }
-.searchImg {
-    border-radius: 50px;
-}
+
 
 
 .sideBar  {
@@ -648,41 +578,7 @@ a:hover {
     }
     
 
-    .upperBar {
-        display: flex;
-        flex-direction: row;
-        border-style: double;
-        border-color: rgb(68, 64, 64);
-        border-width: 10px;
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
-        justify-content: space-around;
-       max-width:100%;
-      
-    }
-
-    
-    .upperBar  .navigation {
-    
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-       
-    
-    }
-    
-    .upperBar .navigation > li {
-        font-size: 1.5em;
-        list-style-type: none;
-        padding: 1em 2em;
-        margin-top: 0;
-        margin-bottom: 0;
-        position: relative;
-        color:white;
-        font-family: 'Courier New', Courier, monospace;
-        text-decoration: none;
-    }
+   
     
     
     .userProfile {
@@ -740,47 +636,11 @@ a:hover {
          
      }
 
-     .searchBar {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        display:inline;
-        position: relative; 
-       padding: 5px;
-        font-size: 0.75em;
-        color:white;
-        height:50%;
-        top: 50px;
-        border-style: double;
-        border-color: rgb(68, 64, 64);
-        border-width: 5px;
-        border-top: 0;
-        border-bottom: 0;
-        border-left: 0;
-        
-        
-    }
+     
 
-    .searchBar > label > input {
-        width: 15%;
-    }
 
-    .searchResult > ul {
-        
-        display: inline;
-       text-align: left;
-        display: flex;
-        list-style-type: none;
-        flex-direction: column;
-        position: absolute;
-        
-    }
     
-    .eachSearch {
-        
-        margin-top: 55%;
-        font-size: 0.75em;
-        border-top: 1px solid rgb(68,64,64);
-       
-    }
+   
     
      .top {
         display: flex;
@@ -791,10 +651,7 @@ a:hover {
     
         
     }
-    .searchImg {
-        border-radius: 50px;
-    }
-
+  
     .selectBoxes , .filter, .sortBy {
     
         margin-left: auto;
@@ -1120,58 +977,8 @@ a:hover {
         height:800px;
         
     }
-    .upperBar {
-        display: flex;
-        flex-direction: column-reverse;
-        
-        border: 2px solid rgb(68, 64, 64);
-        border-width: 0;
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
-        
-       width:100%;
-      
-    }
-
-    
-    .upperBar  .navigation {
-    
-        display: flex;
-        flex-direction: column;
-        position: ab;
-       width:100%;
-        margin-left: 0;
-       padding-left:0;
-    
-    }
-    
-    .upperBar .navigation > li {
-        font-size: 1em;
-        list-style-type: none;
-        padding:0;
-        padding-top: 2em;
-        margin-top: 0;
-        margin-bottom: 0;
-        position: relative;
-        color:white;
-        font-family: 'Courier New', Courier, monospace;
-        text-decoration: none;
-        border: 2px solid  rgb(68, 64, 64);
-        border-width: auto;
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .upperBar .navigation > li:hover {
-        background-color: rgb(141, 137, 130);
-        color:rgba(224, 147, 3, 0.973)
-    }
+   
+ 
     .userProfile {
      
         display: flex;
@@ -1233,48 +1040,10 @@ a:hover {
          
      }
 
-     .searchBar {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        display: inline;
-    position: relative;
-       padding: 0;
-        font-size: 0.75em;
-        color:white;
-        height:0%;
-        top: 0;
-        border-width: 0;
-        border-top: 0;
-        border-bottom: 0;
-        border-left: 0;
-        margin-left: auto;
-        margin-right: auto;
-        
-        
-    }
 
-    .searchBar > label > input {
-        margin-top: 0;
-        width: 15%;
-      
-    }
 
-    .searchResult > ul {
-        
-        display: inline;
-       text-align: left;
-        display: flex;
-        list-style-type: none;
-        flex-direction: column;
-        position: relative;
-        
-    }
-    
-    .eachSearch {
-        
-        margin-top: 0%;
-        border-top: 1px solid rgb(68,64,64);
-        position: relative;
-    }
+  
+ 
     
      .top {
         display: flex;
@@ -1285,12 +1054,7 @@ a:hover {
     
         
     }
-    .searchImg {
-        border-radius: 50px;
-        width:45%;
-             
-    }
-
+  
     .selectBoxes , .filter, .sortBy {
     
         

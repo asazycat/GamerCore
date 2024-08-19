@@ -1,11 +1,11 @@
 import { FormEvent } from "react";
-import { doc, updateDoc, getDoc } from "firebase/firestore";
+import { doc, updateDoc } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { IComments } from "../../interfaces/interfaces";
-
+import getFeedPage from "../../util/asyncFunctions";
 import db from '../../src/firebase'
 import ListOfComments from "./ListOfComments";
-
+// import  {CommentsC}  from "../../classes/FeedClass";
 export default function Comments(props: {id:string}) {
 
 
@@ -23,10 +23,23 @@ export default function Comments(props: {id:string}) {
        
 
         e.preventDefault()
-        const docRef = doc(db, "feed", id)
-        const data = (await getDoc(docRef)).data()
+        
+        const data = (await getFeedPage(id)).data();
+
+        // if (document.exists()) 
+        //     {
+        //     const data  = document.data().comments;
+        //     console.log(data)
+        //     const allComments = new CommentsC(data);
+           
+           
+        //     allComments.newComment(allComments.CommentLength,commentText,theDate,0);
+        //    console.log(allComments.comments)
+        //    setComments(allComments.comments)
+        // } else {console.log()}
 
         if (data !== undefined) {
+            console.log(data)
             const newComments = data.comments
         
             console.log(newComments)

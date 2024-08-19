@@ -1,7 +1,7 @@
 export interface IComments {
    comment_id: number,
    commentText: string,
-   date:string
+   date:string,
    commentVotes:number
 
 }

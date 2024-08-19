@@ -26,20 +26,7 @@ body {
       color:azure
     }
     
-    .searchBar {
-    
-    
-    margin-top:auto;
-    margin-bottom: auto;
-    border-radius: 5em;
-    margin-left: 0.5%;
-    padding:0.5em;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: left;
-    border: 3px solid #816583;
-    background-color: #655769;
-    color:azure;
-    }
+  
     
     .upperBar {
       
@@ -52,6 +39,21 @@ body {
       
      
     }
+
+    .searchBar {
+    
+    
+      margin-top:auto;
+      margin-bottom: auto;
+      border-radius: 5em;
+      margin-left: 0.5%;
+      padding:0.5em;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      text-align: left;
+      border: 3px solid #816583;
+      background-color: #655769;
+      color:azure;
+      }
     
     
     .format {

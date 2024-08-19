@@ -17,7 +17,7 @@ export default function ListOfComments (props: {id:string}) {
            setCommentList(data.comments)
             } else {
        
-                console.log("No such document!");
+                console.log();
               }
         })
         
