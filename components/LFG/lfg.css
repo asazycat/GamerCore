@@ -48,6 +48,13 @@
     border-radius: 2em;
 }
 
+
+.searchGame {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+ }
+
+
 @media (max-width:1100px) {
 
 }
