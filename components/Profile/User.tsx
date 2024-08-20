@@ -4,7 +4,7 @@ import {  useContext, useEffect, useState } from "react"
 import { LoginContext } from "../../context/LoginContext.tsx"
 import { doc, getDoc } from "firebase/firestore";
 import db from "../../src/firebase.ts"
-
+import "./profile.css";
 
 
 

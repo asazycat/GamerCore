@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { IUsers } from "../../interfaces/interfaces"
+import "./search.css";
 export default function EachSearchResult(props: {searchResult: IUsers}) {
     const {searchResult} = props
     return (

@@ -1,9 +1,9 @@
 
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged   } from "firebase/auth";
-import { LoginContext } from '../context/LoginContext';
+import { LoginContext } from '../../context/LoginContext';
 import { useContext, useState, useEffect, Dispatch, SetStateAction,  } from 'react';
-import gaming from '../images/epicImg.jpg'
-
+import gaming from '../../images/epicImg.jpg'
+import "./login.css";
 
 export default function Login (props: {login: boolean, setLogin: Dispatch<SetStateAction<boolean>>}) {
 

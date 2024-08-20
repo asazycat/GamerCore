@@ -1,8 +1,8 @@
 import {useState,useContext,useEffect, FormEvent} from 'react'
 import { collection, addDoc, doc , getDoc} from "firebase/firestore"; 
-import { LoginContext } from '../context/LoginContext'
-import db from "../src/firebase"
-
+import { LoginContext } from '../../context/LoginContext'
+import db from "../../src/firebase"
+import "./post.css";
 export default function PostType (props: {active: string}) {
 
 

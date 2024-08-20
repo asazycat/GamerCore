@@ -1,4 +1,5 @@
 
+import "./search.css";
 export default function SearchBar(props: {searchTerm: string,   setSearchTerm: (term: string)=> void}) {
     const {searchTerm} = props
     const {setSearchTerm} = props

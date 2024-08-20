@@ -1,168 +1,29 @@
-@import url("../components/Header/header.css");
-@import url("../components/Search/search.css");
+
 body {
     background-color: rgb(26, 24, 24);
 }
-
-.login > form {
-   
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    margin:auto;
-    position: absolute;
-    right:35%;
-    margin-top: 10%;
-    padding:3em;
-    line-height: 2em;
-    color: white;
-    background: rgb(48, 46, 46);
-    border-radius: 2em;
-    font-family:'Courier New', Courier, monospace;
-    font-size: 1.5em;
-    opacity: 0.8;
-}
-
-
-.loginButton {
-    border:0px;
-    background-color: rgb(141, 137, 130);
-    padding:0.5em;
-    margin-top: 10%;
-    border-radius: 10px;
-    width: 100%;
-    font-size:1.5em;
-    font-family:'Courier New', Courier, monospace ;
-    position:relative;
-}
-
-.loginButton:hover {
-background-color: rgb(160, 156, 149);
-color: white;
-}
-
-.demoButton {
-    background-color:rgb(68, 64, 64); ;
-    border: 0px;
-    color: rgba(204, 137, 13, 0.808)
-}
-
-.demoButton:hover {
-    color: rgba(224, 147, 3, 0.973)
-}
-
-.loginImg {
-    display:block;
-    position: relative;
-    float:left;
-    width:100%;
-  
-    opacity: 0.3;
-    height: auto;
-    
-}
-
-
-
-
-.userProfile {
-    display: flex;
-    flex-direction: row;
-    margin-left: auto;
-    margin-top:  1em;
-   
-    width: 15%;
-} 
-.userProfile .userName {
-    font-size: 1.5em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   
-}
-
-
-
-
-.proImg {
-    height: 5em;
-    width:5em;
-    margin-right: 15%;
-    margin-top: 5%;
-    border-radius: 40px;
-}
-
-.signOut {
-    border: 0;
-    background-color: rgb(141, 137, 130);
-    font-size: 1em;
-    font-family:'Courier New', Courier, monospace  ;
-}
-.signOut:hover {
-    background-color: rgb(160, 156, 149);
-    color: white;
-}
-
- .top {
+.top {
     display: flex;
     flex-direction: row;
     width: 10em;
     justify-content: space-between;
     margin-top: 10%;
-
-    
-}
-
-
-
-.sideBar  {
- 
-   display: inline;
-    height: auto;
-    position: fixed;
-    right: 2%;
-    font-size: 2em;
-    list-style-type:none ;
-    margin-top: 2%;
-    font-family:'Courier New', Courier, monospace  ;
-    border-style: double;
-    border-color: rgb(68, 64, 64);
-    border-width: 5px;
-    border-top: 0;
-    border-bottom: 0;
-    border-right: 0;
-    
-}
-
-
-.sideBar > li {
-   
-    margin-top: 2.5em;
-    color:white;
 }
 
 a:visited, a:link {
     text-decoration: none;
     color: white
 }
-
 a:hover {
     color:rgba(224, 147, 3, 0.973)
 }
-
-.format {
-    
-}
-
 .selectBoxes , .filter, .sortBy {
-    
-    margin-left: auto;
+     margin-left: auto;
     margin-right: auto;
     width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
-    
- 
 }
 
 .selectBoxes {
@@ -185,9 +46,6 @@ a:hover {
     margin-bottom:1%;
 }
 
-
-
-
 .share {
 
     margin-right: 1em;
@@ -198,7 +56,6 @@ a:hover {
     color:white;
     border: 2px solid rgba(204, 137, 13, 0.808);
     position: relative;
-   
     border-radius: 100px;
 }
 
@@ -209,22 +66,17 @@ a:hover {
 
 
 .feedList {
-   
     width: 50%;
     margin-left: auto;
     margin-right: auto;
     list-style-type: none;
-  
     padding: 0.25em;
-    
 }
 
 .eachFeed {
-   
     margin-top: 1%;
     background-color: #69676b;
     border-radius: 10px;
-
 }
 
 .postTitle  {
@@ -241,8 +93,7 @@ a:hover {
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    
-}
+  }
 
 .userPost {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -264,246 +115,47 @@ a:hover {
     font-size: 2em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: -1%;
-  
   }
-
   .voteButton {
     border: 0;
     background-color: #69676b;
     font-size: 1em;
-
-}
+  }
 .voteButton:hover {
     color: rgba(165, 113, 17, 0.973);
 }
-
 .date {
-    
-    text-align: right;
+  text-align: right;
   border:1px solid grey;
   }
-
-  
-  .comment_amount {
+.comment_amount {
     text-align: left;
   }
   
 .exceptionHyperLink:hover {
     color:white
-
 }
 
 .FeedPage {
     background-color: #69676b;
     border-radius: 10px;
-    
     margin-left: auto;
     margin-right: auto;
     width:50%;
 }
 
-.userPage {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5em;
-    border-radius:4em ;
-    padding:2em;
-    width:50%;
-    color:white;
-    background-color: #69676b;
     
-  }
-  .userBioImg {
-    display: flex;
-    flex-direction: row;
-    column-gap: 1em;
-  }
-  
-  
-  .secondPart {
-    margin-left: auto;
-    margin-right: auto;
-    
-    text-align: center;
-  }
-  .username {
-    font-size: 3em;
-  }
-  .bioResult {
-    font-size: 2em;
-  }
-  
-  .pageProfile {
-   
-    border-radius: 15em;
-  }
-  
-  
-  .proImg {
-    height:3em;
-     width:3em;
-     border-radius: 5em;
-     margin-top: auto;
-     margin-bottom: auto;
-  }
-  
-  .postForm {
- 
-    margin-left: auto;
-    margin-right:auto;
-    width:50%;
-  }
-
-  .postType {
-    
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 5%;
-    background-color:#313131;
-    border-top-left-radius: 2em;
-    border-top-right-radius: 2em;
-  }
   .head {
     color:rgb(160, 156, 149);
         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
         font-size: 250%;
         text-align: center;
   }
-  .discussionForm , .createLFG{
-    background-color:rgb(22, 22, 22,0.5);
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2em;
-  }
-  .formEle {
- 
-  padding: 2px;
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  }
 
-  .title {
-    resize: none;
-    text-align: center;
-    height:1.25em;
-    width: 100%;
-    font-size: 2em;
-    background-color:#313131;
-    border-radius: 1em;
-    color: aliceblue;
-
-  }
-
-    .discussion {
-        resize: none;
-        color: aliceblue;
-        height:25em;
-        width: 100%;
-        font-size: 1.5em;
-        background-color:#313131;
-        border-radius: 0.25em;
-    }
-
-    .shareSubmitButton {
-        text-align: center;
-    }
-
-    .platform {
-  
-        width: 60%;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        font-size: 150%;
-        color:rgb(160, 108, 12);
-        background-color:#313131;
-        padding: 0.5em;
-        border-top-left-radius: 1em;
-        border-top-right-radius: 1em;
-    }
-    .platformGame {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-  
-    }
-    .game {
-        resize: none;
-        
-        height:1.25em;
-        
-        font-size: 1em;
-        background-color:#313131;
-        
-        color: aliceblue;
-    
-      }
-     .LFGButton {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-size: 150%;
-        width:60%;
-        margin-left: auto;
-        margin-right: auto;
-        background-color:#313131;
-        padding: 0.5em;
-        border-bottom-left-radius: 1em;
-        border-bottom-right-radius: 1em;
-
-     }
-     .searchGame {
+    .searchGame {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: aliceblue;
      }
-
-    .LFG {
-        padding: 2em;
-        display: grid;
-        grid-template-columns: auto auto auto;
-        width:65%;
-        margin-left: auto;
-        margin-right: auto;
-        
-        gap:2%;
-    }
-
-    .eachLFG {
-      
-        font-size: 100%;
-        background-color: #69676b;
-        padding: 1em;
-        border-radius: 2em;
-    }
-
-
-  .follow {
-   
-    margin-top: 1%;
-    margin-bottom:auto;
-    background-color: rgb(106, 101, 92);
-    font-size: 1em;
-    font-family:'Courier New', Courier, monospace  ;
-    color:white;
-    border: 2px solid rgba(204, 137, 13, 0.808);
-    border-radius: 100px;
-  }
-
-  .follow:hover {
-    background-color: rgb(121, 119, 114);
-    color: rgba(224, 147, 3, 0.973);
-}
-  
 
 .LiveStreamer {
     border: 2px solid green;
@@ -514,156 +166,24 @@ a:hover {
 }
 
 
-
-
 @media (max-width: 1100px) {
 
-    .login > form {
-   
-        display: flex;
-        flex-direction: column;
-        width: 20%;
-        margin:auto;
-        position: absolute;
-        right:35%;
-        margin-top: 20%;
-        padding:3em;
-        line-height: 1.5em;
-        color: white;
-        background: rgb(48, 46, 46);
-        border-radius: 2em;
-        font-family:'Courier New', Courier, monospace;
-        font-size: 1.5em;
-        opacity: 0.8;
-    }
-    
-    
-    .loginButton {
-        border:0px;
-        background-color: rgb(141, 137, 130);
-        padding:0.5em;
-        margin-top: 10%;
-        border-radius: 10px;
-        width: 100%;
-        font-size:1em;
-        font-family:'Courier New', Courier, monospace ;
-        position:relative;
-    }
-    
-    .loginButton:hover {
-    background-color: rgb(160, 156, 149);
-    color: white;
-    }
-    
-    .demoButton {
-        background-color:rgb(68, 64, 64); ;
-        border: 0px;
-        color: rgba(204, 137, 13, 0.808)
-    }
-    
-    .demoButton:hover {
-        color: rgba(224, 147, 3, 0.973)
-    }
-    
-    .loginImg {
-        display:block;
-        position: relative;
-        float:left;
-        width:100%;
-       
-        
-        opacity: 0.3;
-        height:1500px;
-        
-    }
-    
-
-   
-    
-    
-    .userProfile {
-        display: flex;
-        flex-direction: row;
-        margin-left: auto;
-        margin-top:  1em;
-       
-        
-    } 
-    .userProfile .userName {
-        font-size: 1.0em;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-       
-    }
-    
-    
-    
-    
-    .proImg {
-        height: 4em;
-        width:4em;
-        margin-right: 1%;
-        margin-top: 5%;
-        border-radius: 40px;
-    }
-    
-    .signOut {
-        border: 0;
-        background-color: rgb(141, 137, 130);
-        font-size: 0.5em;
-        font-family:'Courier New', Courier, monospace  ;
-    }
-    .signOut:hover {
-        background-color: rgb(160, 156, 149);
-        color: white;
-    }
-
-    .sideBar  {
- 
-        display: inline;
-         height: auto;
-         position: fixed;
-        
-         font-size: 1.0em;
-         list-style-type:none ;
-         margin-top: 2%;
-         font-family:'Courier New', Courier, monospace  ;
-         border-style: double;
-         border-color: rgb(68, 64, 64);
-         border-width: 5px;
-         border-top: 0;
-         border-bottom: 0;
-         border-right: 0;
-         
-     }
-
-     
-
-
-    
-   
-    
-     .top {
+    .top {
         display: flex;
         flex-direction: row;
         width: 10em;
         justify-content: space-between;
         margin-top: 10%;
-    
-        
     }
   
     .selectBoxes , .filter, .sortBy {
-    
-        margin-left: auto;
+         margin-left: auto;
         margin-right: auto;
         width: 50%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        
-        
-     
-    }
+       }
     
     .selectBoxes {
         margin-top: 2%;
@@ -689,7 +209,6 @@ a:hover {
     
     
     .share {
-    
         margin-right: 1em;
         border:0;
         background-color: rgb(106, 101, 92);
@@ -698,36 +217,25 @@ a:hover {
         color:white;
         border: 2px solid rgba(204, 137, 13, 0.808);
         position: relative;
-       
         border-radius: 100px;
     }
-    
-    .share:hover {
+      .share:hover {
         background-color: rgb(121, 119, 114);
         color: rgba(224, 147, 3, 0.973);
     }
-    
-    
-    .feedList {
-       
+      .feedList {
         width: 50%;
         margin-left: auto;
         margin-right: auto;
         list-style-type: none;
-      
         padding: 0.25em;
-        
     }
-    
-    .eachFeed {
-       
+        .eachFeed {
         margin-top: 1%;
         background-color: #69676b;
         border-radius: 10px;
-    
     }
-    
-    .postTitle  {
+     .postTitle  {
         margin: 0;
         padding:3px;
         color:white;
@@ -743,8 +251,7 @@ a:hover {
         border-right: 0;
         
     }
-    
-    .userPost {
+        .userPost {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color:aliceblue;
         border-bottom: 2px;
@@ -766,308 +273,54 @@ a:hover {
         margin-bottom: -1%;
       
       }
-    
       .voteButton {
         border: 0;
         background-color: #69676b;
         font-size: 1em;
-    
-    }
+      }
     .voteButton:hover {
         color: rgba(165, 113, 17, 0.973);
     }
-    
-    .date {
-        
-        text-align: right;
+      .date {
+      text-align: right;
       border:1px solid grey;
       }
     
-      
       .comment_amount {
         text-align: left;
       }
-
-      .FeedPage {
+        .FeedPage {
         background-color: #69676b;
         border-radius: 10px;
-        
         margin-left: auto;
         margin-right: auto;
         width:50%;
     }
-    
-    .userPage {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5em;
-        border-radius:4em ;
-        padding:2em;
-        width:50%;
-        color:white;
-        background-color: #69676b;
-        
-      }
-      .userBioImg {
-        display: flex;
-        flex-direction: row;
-        column-gap: 1em;
-      }
-      
-      
-      .secondPart {
-        margin-left: auto;
-        margin-right: auto;
-        
-        text-align: center;
-      }
-      .username {
-        font-size: 2em;
-      }
-      .bioResult {
-        font-size: 1.5em;
-      }
-      
       .pageProfile {
         height: 10em;
         width: 10em;
         border-radius: 15em;
       }
-      
-     
-      
-      .postForm {
-    
-        margin-left: auto;
-        margin-right:auto;
-        width:50%;
-      }
-    
-      .postType {
-        margin-left: auto;
-        margin-right: auto;
-        width: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 5%;
-        background-color:#313131;
-        border-top-left-radius: 2em;
-        border-top-right-radius: 2em;
-      }
-
-      .discussionForm , .createLFG{
-        background-color:rgb(22, 22, 22,0.5);
-        display: flex;
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 2em;
-      }
-      .formEle {
-     
-      padding: 2px;
-      width: 75%;
-      margin-left: auto;
-      margin-right: auto;
-      }
-    
-      .title {
-        resize: none;
-        text-align: center;
-        height:1.25em;
-        width: 100%;
-        font-size: 2em;
-        background-color:#313131;
-        border-radius: 1em;
-        color: aliceblue;
-    
-      }
-    
-        .discussion {
-            resize: none;
-            color: aliceblue;
-            height:25em;
-            width: 100%;
-            font-size: 1.5em;
-            background-color:#313131;
-            border-radius: 0.25em;
-        }
-    
-        .shareSubmitButton {
-            text-align: center;
-        }
-      .follow {
-       
-        margin-top: 1%;
-        margin-bottom:auto;
-        background-color: rgb(106, 101, 92);
-        font-size: 1em;
-        font-family:'Courier New', Courier, monospace  ;
-        color:white;
-        border: 2px solid rgba(204, 137, 13, 0.808);
-        border-radius: 100px;
-      }
-    
-      .follow:hover {
-        background-color: rgb(121, 119, 114);
-        color: rgba(224, 147, 3, 0.973);
     }
-  }
 
 
   @media  (max-width: 815px) {
 
-    .login > form {
-   
-        display: flex;
-        flex-direction: column;
-        width: 20%;
-        margin:auto;
-        position: absolute;
-        right:35%;
-        margin-top: 20%;
-        padding:3em;
-        line-height: 1.5em;
-        color: white;
-        background: rgb(48, 46, 46);
-        border-radius: 2em;
-        font-family:'Courier New', Courier, monospace;
-        font-size: 1em;
-        opacity: 0.8;
-    }
-    
-    
-    .loginButton {
-        border:0px;
-        background-color: rgb(141, 137, 130);
-        padding:0.5em;
-        margin-top: 10%;
-        border-radius: 10px;
-        width: 100%;
-        font-size:0.75em;
-        font-family:'Courier New', Courier, monospace ;
-        position:relative;
-    }
-    
-    .loginButton:hover {
-    background-color: rgb(160, 156, 149);
-    color: white;
-    }
-    
-    .demoButton {
-        background-color:rgb(68, 64, 64); ;
-        border: 0px;
-        color: rgba(204, 137, 13, 0.808);
-        font-size: 0.5em;
-    }
-    
-    .demoButton:hover {
-        color: rgba(224, 147, 3, 0.973)
-    }
-    
-    .loginImg {
-        display:block;
-        position: relative;
-        float:left;
-        width:100%;
-       
-        
-        opacity: 0.3;
-        height:800px;
-        
-    }
-   
- 
-    .userProfile {
-     
-        display: flex;
-        flex-direction: row;
-        padding: 0;
-       width: 100%;
-       background-color: #313131;
-       justify-content: space-between;
-        
-    } 
-
-    .proNameProfile {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    .userProfile .userName {
-        font-size: 1em;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-       padding: 15px
-    }
-    
-    .proImg {
-        height: 3em;
-        width:3em;
-        border-radius: 40px;
-        margin-top: auto;
-        position: relative;
-    }
-    
-    .signOut {
-        border: 0;
-        background-color: rgb(141, 137, 130);
-        font-size: 0.75em;
-        font-family:'Courier New', Courier, monospace  ;
-        margin-top: auto;
-        margin-bottom: auto;
-        border-radius:20px;
-        
-    }
-    .signOut:hover {
-        background-color: rgb(160, 156, 149);
-        color: white;
-    }
-
-    .sideBar  {
- 
-        display: flex;
-        flex-direction: row;
-         position: relative;
-         font-size: 1em;
-         list-style-type:none ;
-         justify-content: space-around;
-         font-family:'Courier New', Courier, monospace  ;
-         border-width: 0;
-         border-top: 0;
-         border-bottom: 0;
-         border-right: 0;
-         
-     }
-
-
-
-  
- 
-    
-     .top {
+    .top {
         display: flex;
         flex-direction: row;
         width: 10em;
         justify-content: space-between;
         margin-top: 1%;
-    
-        
-    }
-  
-    .selectBoxes , .filter, .sortBy {
-    
-        
+      }
+    .selectBoxes , .filter, .sortBy 
+    {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        
-        
-     
     }
-    
-    .selectBoxes {
+      .selectBoxes {
         margin-top: 2%;
         padding: 1em;
         padding-left: 0;
@@ -1086,12 +339,7 @@ a:hover {
         font-size: 1em;
         margin-bottom:1%;
     }
-    
-    
-    
-    
-    .share {
-    
+      .share {
         margin-right: 1em;
         border:0;
         background-color: rgb(106, 101, 92);
@@ -1108,27 +356,22 @@ a:hover {
         color: rgba(224, 147, 3, 0.973);
     }
     
-    
-    .feedList {
-       
+    .feedList 
+    {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
         list-style-type: none;
-      display: block;
+        display: block;
         padding: 0.25em;
-        
-    }
+      }
     
     .eachFeed {
-       
         margin-top: 1%;
         background-color: #69676b;
         border-radius: 10px;
-    
     }
-    
-    .postTitle  {
+      .postTitle  {
         margin: 0;
         padding:3px;
         color:white;
@@ -1142,10 +385,8 @@ a:hover {
         border-top: 0;
         border-left: 0;
         border-right: 0;
-        
-    }
-    
-    .userPost {
+      }
+      .userPost {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color:aliceblue;
         border-bottom: 2px;
@@ -1153,8 +394,7 @@ a:hover {
         border-top: 0;
         border-left: 0;
         border-right: 0;
-       
-    }
+      }
     .postContent {
        font-size: 1em;
        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; ;
@@ -1165,32 +405,23 @@ a:hover {
         font-size: 1em;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin-bottom: -1%;
-      
-      }
-    
-      .voteButton {
+          }
+        .voteButton {
         border: 0;
         background-color: #69676b;
         font-size: 1em;
-    
-    }
+        }
     .voteButton:hover {
         color: rgba(165, 113, 17, 0.973);
     }
-    
-    .date {
-        
+        .date {
         text-align: right;
       border:1px solid grey;
       }
-    
-      
-      .comment_amount {
+        .comment_amount {
         text-align: left;
       }
-
-      
-      .FeedPage {
+        .FeedPage {
         background-color: #69676b;
         border-radius: 10px;
         
@@ -1198,125 +429,9 @@ a:hover {
         margin-right: auto;
         width:100%;
     }
-    
-    .userPage {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5em;
-        border-radius:4em ;
-        padding:2em;
-        width:85%;
-        color:white;
-        background-color: #69676b;
-        
-      }
-      .userBioImg {
-        display: flex;
-        flex-direction: row;
-        column-gap: 1em;
-      }
-      
-      
-      .secondPart {
-        margin-left: auto;
-        margin-right: auto;
-        
-        text-align: center;
-      }
-      .username {
-        font-size: 1.5em;
-      }
-      .bioResult {
-        font-size: 1em;
-      }
-      
       .pageProfile {
         height: 5em;
         width: 5em;
         border-radius: 15em;
       }
-      
-     
-      
-      .postForm {
-        
-        margin-left: auto;
-        margin-right:auto;
-        width:100%;
-      }
-    
-      .postType {
-        
-        margin-left: auto;
-        margin-right: auto;
-        width: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 5%;
-        background-color:#313131;
-        border-top-left-radius: 2em;
-        border-top-right-radius: 2em;
-      }
-      .discussionForm , .createLFG{
-        background-color:rgb(22, 22, 22,0.5);
-        display: flex;
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 2em;
-      }
-      .formEle {
-     
-      padding: 2px;
-      width: 75%;
-      margin-left: auto;
-      margin-right: auto;
-      }
-    
-      .title {
-        resize: none;
-        text-align: center;
-        height:1.25em;
-        width: 100%;
-        font-size: 2em;
-        background-color:#313131;
-        border-radius: 1em;
-        color: aliceblue;
-    
-      }
-    
-        .discussion {
-            resize: none;
-            color: aliceblue;
-            height:25em;
-            width: 100%;
-            font-size: 1.5em;
-            background-color:#313131;
-            border-radius: 0.25em;
-        }
-    
-        .shareSubmitButton {
-            text-align: center;
-        }
-
-      
-
-
-      .follow {
-       
-        margin-top: 1%;
-        margin-bottom:auto;
-        background-color: rgb(106, 101, 92);
-        font-size: 1em;
-        font-family:'Courier New', Courier, monospace  ;
-        color:white;
-        border: 2px solid rgba(204, 137, 13, 0.808);
-        border-radius: 100px;
-      }
-    
-      .follow:hover {
-        background-color: rgb(121, 119, 114);
-        color: rgba(224, 147, 3, 0.973);
-    }
   }

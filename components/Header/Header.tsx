@@ -3,6 +3,7 @@ import Profile from "../Profile/Profile"
 import {Link } from 'react-router-dom';
 import Sidebar from "../SiderBar/Sidebar";
 import SearchResult from "../Search/SearchResult";
+import "./header.css"
 import { useState } from 'react';
 
 export default function Header () {

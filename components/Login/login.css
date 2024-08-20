@@ -1,0 +1,189 @@
+
+.login > form {
+   
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin:auto;
+    position: absolute;
+    right:35%;
+    margin-top: 10%;
+    padding:3em;
+    line-height: 2em;
+    color: white;
+    background: rgb(48, 46, 46);
+    border-radius: 2em;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    opacity: 0.8;
+}
+
+.loginButton {
+    border:0px;
+    background-color: rgb(141, 137, 130);
+    padding:0.5em;
+    margin-top: 10%;
+    border-radius: 10px;
+    width: 100%;
+    font-size:1.5em;
+    font-family:'Courier New', Courier, monospace ;
+    position:relative;
+}
+
+
+.loginButton:hover {
+    background-color: rgb(160, 156, 149);
+    color: white;
+    }
+    
+    .demoButton {
+        background-color:rgb(68, 64, 64); ;
+        border: 0px;
+        color: rgba(204, 137, 13, 0.808)
+    }
+    
+    .demoButton:hover {
+        color: rgba(224, 147, 3, 0.973)
+    }
+    
+    .loginImg {
+        display:block;
+        position: relative;
+        float:left;
+        width:100%;
+      
+        opacity: 0.3;
+        height: auto;
+        
+    }
+    
+
+
+
+@media (max-width:1100px) {
+    .login > form {
+   
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        margin:auto;
+        position: absolute;
+        right:35%;
+        margin-top: 20%;
+        padding:3em;
+        line-height: 1.5em;
+        color: white;
+        background: rgb(48, 46, 46);
+        border-radius: 2em;
+        font-family:'Courier New', Courier, monospace;
+        font-size: 1.5em;
+        opacity: 0.8;
+    }
+    
+    
+    .loginButton {
+        border:0px;
+        background-color: rgb(141, 137, 130);
+        padding:0.5em;
+        margin-top: 10%;
+        border-radius: 10px;
+        width: 100%;
+        font-size:1em;
+        font-family:'Courier New', Courier, monospace ;
+        position:relative;
+    }
+    
+    .loginButton:hover {
+    background-color: rgb(160, 156, 149);
+    color: white;
+    }
+    
+    .demoButton {
+        background-color:rgb(68, 64, 64); ;
+        border: 0px;
+        color: rgba(204, 137, 13, 0.808)
+    }
+    
+    .demoButton:hover {
+        color: rgba(224, 147, 3, 0.973)
+    }
+    
+    .loginImg {
+        display:block;
+        position: relative;
+        float:left;
+        width:100%;
+       
+        
+        opacity: 0.3;
+        height:1500px;
+        
+    }
+    
+}
+
+
+
+
+
+@media (max-width:815px) {
+    .login > form {
+   
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        margin:auto;
+        position: absolute;
+        right:35%;
+        margin-top: 20%;
+        padding:3em;
+        line-height: 1.5em;
+        color: white;
+        background: rgb(48, 46, 46);
+        border-radius: 2em;
+        font-family:'Courier New', Courier, monospace;
+        font-size: 1em;
+        opacity: 0.8;
+    }
+    
+    
+    .loginButton {
+        border:0px;
+        background-color: rgb(141, 137, 130);
+        padding:0.5em;
+        margin-top: 10%;
+        border-radius: 10px;
+        width: 100%;
+        font-size:0.75em;
+        font-family:'Courier New', Courier, monospace ;
+        position:relative;
+    }
+    
+    .loginButton:hover {
+    background-color: rgb(160, 156, 149);
+    color: white;
+    }
+    
+    .demoButton {
+        background-color:rgb(68, 64, 64); ;
+        border: 0px;
+        color: rgba(204, 137, 13, 0.808);
+        font-size: 0.5em;
+    }
+    
+    .demoButton:hover {
+        color: rgba(224, 147, 3, 0.973)
+    }
+    
+    .loginImg {
+        display:block;
+        position: relative;
+        float:left;
+        width:100%;
+       
+        
+        opacity: 0.3;
+        height:800px;
+        
+    }
+}

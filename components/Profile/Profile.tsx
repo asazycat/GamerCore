@@ -3,7 +3,7 @@ import { useContext, useEffect,useState } from "react"
 import { getAuth,signOut   } from "firebase/auth";
 import { IProfile } from "../../interfaces/interfaces";
 import { Link } from "react-router-dom"
-
+import "./profile.css";
 import { doc, getDoc } from "firebase/firestore";
 import db from "../../src/firebase"
 

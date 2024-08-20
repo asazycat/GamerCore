@@ -9,8 +9,8 @@ import LFG from '../components/LFG/LFG.tsx'
 import User from '../components/Profile/User.tsx'
 import { useState } from 'react';
 import Inbox from '../components/SiderBar/Inbox.tsx'
-import Login from '../components/Login.tsx'
-import Post from '../components/Post.tsx'
+import Login from '../components/Login/Login.tsx'
+import Post from '../components/Post/Post.tsx'
 import Followers from '../components/Follow/Followers.tsx'
 import FeedPage from '../components/Feed/FeedPage.tsx'
 

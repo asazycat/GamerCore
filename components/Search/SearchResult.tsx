@@ -3,8 +3,8 @@ import { findUser } from "../../util/util"
 import {IUsers } from "../../interfaces/interfaces"
 import EachSearchResult from "./EachSearchResult"
 import { getDocs, collection } from "firebase/firestore"
-import db from "../../src/firebase"
-
+import db from "../../src/firebase";
+import "./search.css";
 
 
 export default function SearchResult(props: {searchTerm: string}) {

@@ -1,5 +1,6 @@
  import {MouseEvent, useState} from 'react'
-import PostType from './PostType'
+import PostType from './PostType.tsx'
+import "./post.css";
 export default function Post () {
    const [active, setActive] = useState('discussion')
    
