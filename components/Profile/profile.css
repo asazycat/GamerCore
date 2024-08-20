@@ -115,6 +115,11 @@
     }
     
     
+    .pageProfile {
+      height: 10em;
+      width: 10em;
+      border-radius: 15em;
+    }
     
     
     .proImg {
@@ -215,5 +220,11 @@
     .signOut:hover {
         background-color: rgb(160, 156, 149);
         color: white;
+    }
+
+    .pageProfile {
+      height: 5em;
+      width: 5em;
+      border-radius: 15em;
     }
 }

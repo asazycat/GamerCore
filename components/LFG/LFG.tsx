@@ -1,7 +1,7 @@
 
 import { useState,useEffect } from "react"
 import EachLFG from "./EachLFG.tsx"
-
+import "./lfg.css"
 import {platformFilter} from '../../util/util.ts'
 import { Link } from "react-router-dom"
 import db from "../../src/firebase.ts"

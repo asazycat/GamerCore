@@ -1,6 +1,7 @@
 import Votes from ".././Votes"
 import {IFeed } from "../../interfaces/interfaces"
 import { Link } from "react-router-dom"
+import "./eachfeed.css"
 export default function EachFeed (props:{eachFeed: IFeed}) {
     const {eachFeed} = props
     

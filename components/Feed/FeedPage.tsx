@@ -1,6 +1,6 @@
 import { useEffect, useState , useContext} from "react"
 import { LoginContext } from "../../context/LoginContext"
-
+import "./feedpage.css";
 import { useParams } from "react-router-dom"
 import { IFeedPage } from "../../interfaces/interfaces"
 import { FeedPageC } from "../../classes/FeedClass"

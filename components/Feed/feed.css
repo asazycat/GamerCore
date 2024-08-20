@@ -1,0 +1,116 @@
+.selectBoxes , .filter, .sortBy {
+    margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.selectBoxes {
+   margin-top: 2%;
+   padding: 1em;
+   padding-left: 0;
+   padding-right: 0;
+   display: flex;
+   flex-direction: row;
+   text-align: left;
+   background-color: rgb(68, 64, 64);
+   border-top-left-radius: 1.5em;
+   border-top-right-radius: 1.5em;
+   border-bottom-left-radius: 1em;
+   border-bottom-right-radius: 1em;
+   line-height: 50px;
+   border: 2px solid rgb(68, 64, 64);
+   color:white;
+   font-size: 1.5em;
+   margin-bottom:1%;
+}
+
+.feedList {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+    padding: 0.25em;
+}
+
+
+
+@media (max-width:1100px) {
+    .selectBoxes , .filter, .sortBy {
+        margin-left: auto;
+       margin-right: auto;
+       width: 50%;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+      }
+   
+   .selectBoxes {
+       margin-top: 2%;
+       padding: 1em;
+       padding-left: 0;
+       padding-right: 0;
+       display: flex;
+       flex-direction: row;
+       text-align: left;
+       background-color: rgb(68, 64, 64);
+       border-top-left-radius: 1.5em;
+       border-top-right-radius: 1.5em;
+       border-bottom-left-radius: 1em;
+       border-bottom-right-radius: 1em;
+       line-height: 50px;
+       border: 2px solid rgb(68, 64, 64);
+       color:white;
+       font-size: 1em;
+       margin-bottom:1%;
+   }
+   .feedList {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+    padding: 0.25em;
+}
+}
+
+
+@media (max-width:815px) {
+    .selectBoxes , .filter, .sortBy 
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+      .selectBoxes {
+        margin-top: 2%;
+        padding: 1em;
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        background-color: rgb(68, 64, 64);
+        border-top-left-radius: 1.5em;
+        border-top-right-radius: 1.5em;
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        line-height: 50px;
+        border: 2px solid rgb(68, 64, 64);
+        color:white;
+        font-size: 1em;
+        margin-bottom:1%;
+    }
+
+    .feedList 
+    {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        list-style-type: none;
+        display: block;
+        padding: 0.25em;
+      }
+}

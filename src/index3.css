@@ -8,6 +8,7 @@ body {
     width: 10em;
     justify-content: space-between;
     margin-top: 10%;
+   
 }
 
 a:visited, a:link {
@@ -17,34 +18,7 @@ a:visited, a:link {
 a:hover {
     color:rgba(224, 147, 3, 0.973)
 }
-.selectBoxes , .filter, .sortBy {
-     margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 
-.selectBoxes {
-    margin-top: 2%;
-    padding: 1em;
-    padding-left: 0;
-    padding-right: 0;
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    background-color: rgb(68, 64, 64);
-    border-top-left-radius: 1.5em;
-    border-top-right-radius: 1.5em;
-    border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em;
-    line-height: 50px;
-    border: 2px solid rgb(68, 64, 64);
-    color:white;
-    font-size: 1.5em;
-    margin-bottom:1%;
-}
 
 .share {
 
@@ -65,84 +39,13 @@ a:hover {
 }
 
 
-.feedList {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    list-style-type: none;
-    padding: 0.25em;
-}
 
-.eachFeed {
-    margin-top: 1%;
-    background-color: #69676b;
-    border-radius: 10px;
-}
 
-.postTitle  {
-    margin: 0;
-    padding:3px;
-    color:white;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
-    font-size: 3em;
-     border-radius: 0.25em;
-     background-color: rgba(204, 137, 13, 0.808);
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border: 2px solid black;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-  }
-
-.userPost {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:aliceblue;
-    border-bottom: 2px;
-    border: 1px solid;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-   
-}
-.postContent {
-   font-size: 2em;
-   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; ;
-    color:rgb(6, 6, 6)
-}
-.votes {
-    text-align: left;
-    font-size: 2em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: -1%;
-  }
-  .voteButton {
-    border: 0;
-    background-color: #69676b;
-    font-size: 1em;
-  }
-.voteButton:hover {
-    color: rgba(165, 113, 17, 0.973);
-}
-.date {
-  text-align: right;
-  border:1px solid grey;
-  }
-.comment_amount {
-    text-align: left;
-  }
   
 .exceptionHyperLink:hover {
     color:white
 }
 
-.FeedPage {
-    background-color: #69676b;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    width:50%;
-}
 
     
   .head {
@@ -176,35 +79,7 @@ a:hover {
         margin-top: 10%;
     }
   
-    .selectBoxes , .filter, .sortBy {
-         margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-       }
-    
-    .selectBoxes {
-        margin-top: 2%;
-        padding: 1em;
-        padding-left: 0;
-        padding-right: 0;
-        display: flex;
-        flex-direction: row;
-        text-align: left;
-        background-color: rgb(68, 64, 64);
-        border-top-left-radius: 1.5em;
-        border-top-right-radius: 1.5em;
-        border-bottom-left-radius: 1em;
-        border-bottom-right-radius: 1em;
-        line-height: 50px;
-        border: 2px solid rgb(68, 64, 64);
-        color:white;
-        font-size: 1em;
-        margin-bottom:1%;
-    }
-    
+  
     
     
     
@@ -223,84 +98,8 @@ a:hover {
         background-color: rgb(121, 119, 114);
         color: rgba(224, 147, 3, 0.973);
     }
-      .feedList {
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        list-style-type: none;
-        padding: 0.25em;
-    }
-        .eachFeed {
-        margin-top: 1%;
-        background-color: #69676b;
-        border-radius: 10px;
-    }
-     .postTitle  {
-        margin: 0;
-        padding:3px;
-        color:white;
-        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
-        font-size: 2em;
-         border-radius: 0.25em;
-         background-color: rgba(204, 137, 13, 0.808);
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        border: 2px solid black;
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
-        
-    }
-        .userPost {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color:aliceblue;
-        border-bottom: 2px;
-        border: 1px solid;
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
-       
-    }
-    .postContent {
-       font-size: 1em;
-       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; ;
-        color:rgb(6, 6, 6)
-    }
-    .votes {
-        text-align: left;
-        font-size: 1em;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin-bottom: -1%;
-      
-      }
-      .voteButton {
-        border: 0;
-        background-color: #69676b;
-        font-size: 1em;
-      }
-    .voteButton:hover {
-        color: rgba(165, 113, 17, 0.973);
-    }
-      .date {
-      text-align: right;
-      border:1px solid grey;
-      }
     
-      .comment_amount {
-        text-align: left;
-      }
-        .FeedPage {
-        background-color: #69676b;
-        border-radius: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        width:50%;
-    }
-      .pageProfile {
-        height: 10em;
-        width: 10em;
-        border-radius: 15em;
-      }
+     
     }
 
 
@@ -313,32 +112,7 @@ a:hover {
         justify-content: space-between;
         margin-top: 1%;
       }
-    .selectBoxes , .filter, .sortBy 
-    {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-      .selectBoxes {
-        margin-top: 2%;
-        padding: 1em;
-        padding-left: 0;
-        padding-right: 0;
-        display: flex;
-        flex-direction: row;
-        text-align: left;
-        background-color: rgb(68, 64, 64);
-        border-top-left-radius: 1.5em;
-        border-top-right-radius: 1.5em;
-        border-bottom-left-radius: 1em;
-        border-bottom-right-radius: 1em;
-        line-height: 50px;
-        border: 2px solid rgb(68, 64, 64);
-        color:white;
-        font-size: 1em;
-        margin-bottom:1%;
-    }
+    
       .share {
         margin-right: 1em;
         border:0;
@@ -356,82 +130,9 @@ a:hover {
         color: rgba(224, 147, 3, 0.973);
     }
     
-    .feedList 
-    {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        list-style-type: none;
-        display: block;
-        padding: 0.25em;
-      }
+ 
     
-    .eachFeed {
-        margin-top: 1%;
-        background-color: #69676b;
-        border-radius: 10px;
-    }
-      .postTitle  {
-        margin: 0;
-        padding:3px;
-        color:white;
-        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
-        font-size: 1.5em;
-         border-radius: 0.25em;
-         background-color: rgba(204, 137, 13, 0.808);
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        border: 2px solid black;
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
-      }
-      .userPost {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color:aliceblue;
-        border-bottom: 2px;
-        border: 1px solid;
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
-      }
-    .postContent {
-       font-size: 1em;
-       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; ;
-        color:rgb(6, 6, 6)
-    }
-    .votes {
-        text-align: left;
-        font-size: 1em;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin-bottom: -1%;
-          }
-        .voteButton {
-        border: 0;
-        background-color: #69676b;
-        font-size: 1em;
-        }
-    .voteButton:hover {
-        color: rgba(165, 113, 17, 0.973);
-    }
-        .date {
-        text-align: right;
-      border:1px solid grey;
-      }
-        .comment_amount {
-        text-align: left;
-      }
-        .FeedPage {
-        background-color: #69676b;
-        border-radius: 10px;
-        
-        margin-left: auto;
-        margin-right: auto;
-        width:100%;
-    }
-      .pageProfile {
-        height: 5em;
-        width: 5em;
-        border-radius: 15em;
-      }
+    
+       
+   
   }

@@ -6,7 +6,7 @@ import {FeedC} from "../../classes/FeedClass"
 import { Link } from "react-router-dom"
 import {IFeed} from '../../interfaces/interfaces'
 import {getFeed} from '../../util/asyncFunctions'
-
+import "./feed.css"
 
 export default function Feed () {
   

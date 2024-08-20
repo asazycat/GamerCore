@@ -1,5 +1,5 @@
 
-
+import "./lfg.css"
 export default function EachLFG(props: {
     eachLFG:{
     LFG_id:string,
