@@ -5,7 +5,7 @@ export default function EachSearchResult(props: {searchResult: IUsers}) {
     const {searchResult} = props
     return (
         <li>
-             <Link to ={`/${searchResult.user_id}`} >
+             <Link to ={`user/${searchResult.user_id}`} >
         <div className="eachSearch">
        
 
