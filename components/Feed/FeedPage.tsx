@@ -8,9 +8,10 @@ import Comments from "../Comments/Comments"
 import getFeedPage from "../../util/asyncFunctions"
 export default function FeedPage () {
 
-
-    
+    const params = useParams();
+    console.log(params)
     const {Feed_Id} = useParams()
+    console.log(Feed_Id);
     const {loginInitials} = useContext(LoginContext)
     const [postId, setPostId] = useState(loginInitials.id)
     const [feedPage, setFeedPage] = useState<IFeedPage>(
@@ -37,7 +38,7 @@ export default function FeedPage () {
                 const FeedPage = new FeedPageC(data.user,data.post_title,data.post_content,data.votes,data.comments,data.date,data.media_type);
                 
                 setFeedPage(FeedPage)
-            } else {console.log()}
+            } else {console.log("what is wrong?")}
             } 
         )()       
     }, [Feed_Id, loginInitials.id, postId])
@@ -47,7 +48,7 @@ export default function FeedPage () {
          <p className="userPost">{feedPage.user}</p>
          <p className="postContent">{feedPage.post_content}</p>
          <p className="feedDate">{feedPage.date}</p>
-         <Comments id={postId} />
+         <Comments id={postId} key={postId}/>
         </div>
             )
 }

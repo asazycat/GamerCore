@@ -1,22 +1,50 @@
-
-import { Routes, Route } from 'react-router-dom'
-
 import './App.css'
 
-import Header from '../components/Header/Header.tsx'
-import Feed from '../components/Feed/Feed.tsx'
-import LFG from '../components/LFG/LFG.tsx'
-import User from '../components/Profile/User.tsx'
 import { useState } from 'react';
-import Inbox from '../components/SiderBar/Inbox.tsx'
 import Login from '../components/Login/Login.tsx'
-import Post from '../components/Post/Post.tsx'
-import Followers from '../components/Follow/Followers.tsx'
-import FeedPage from '../components/Feed/FeedPage.tsx'
-
-import Stream from '../components/SiderBar/Stream.tsx'
-function App() {
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
  
+import Feed from '../components/Feed/Feed.tsx';
+import Header from '../components/Header/Header.tsx';
+import HeroSection from '../components/HeroSection/HeroSection.tsx';
+import LFG from '../components/LFG/LFG.tsx';
+import FeedPage from '../components/Feed/FeedPage.tsx';
+import Post from '../components/Post/Post.tsx';
+
+
+ export const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Header/>,
+        children: [
+            {
+                index:true,
+                element:<HeroSection/>
+            },
+            {
+                path:"/feed",
+                element:<Feed/>
+            },
+            {
+                path:"/feed/:Feed_Id",
+                element:<FeedPage/>
+            },
+            {
+                path:"/LFG",
+                element:<LFG/>
+            },
+
+            {
+                path:"/Post",
+                element:<Post/>
+            }
+        ]
+    }
+])
+
+function App() {
+          
+        
  const [login, setLogin] = useState(false)
 
     if (login ===false) {
@@ -24,23 +52,10 @@ function App() {
     }
     else
 return (
-   <div>
-   <Header/> 
+    <>
+   <RouterProvider router={router}/>
    
-  <Routes>
-    <Route path="/" element={<Feed/>}/>
-    <Route path="Feed/:Feed_Id" element={<FeedPage/>}/>
-    <Route path="/Followers" element = {<Followers/>}/> 
-    <Route path="/Inbox" element={<Inbox/>}/>
-  <Route path="/feed" element={<Feed />} />
-  <Route path="/LFG" element={<LFG />} />
-  <Route path=":user_id" element={<User/>} />
-  <Route path="/post" element={<Post/>} />
-  <Route path="/post" element={<Post/>} />
-  <Route path="/Stream" element={<Stream/>}/>
-  </Routes>
-
-   </div >
+   </>
   )
 
 }
