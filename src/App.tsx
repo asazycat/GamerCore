@@ -10,6 +10,7 @@ import HeroSection from '../components/HeroSection/HeroSection.tsx';
 import LFG from '../components/LFG/LFG.tsx';
 import FeedPage from '../components/Feed/FeedPage.tsx';
 import Post from '../components/Post/Post.tsx';
+import User from '../components/Profile/User.tsx';
 
 
  export const router = createBrowserRouter([
@@ -37,6 +38,10 @@ import Post from '../components/Post/Post.tsx';
             {
                 path:"/Post",
                 element:<Post/>
+            },
+            {
+                path: "/user/:user_id",
+                element: <User/>
             }
         ]
     }
