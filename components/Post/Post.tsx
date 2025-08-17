@@ -2,7 +2,7 @@
 import PostType from './PostType.tsx'
 import "./post.css";
 export default function Post () {
-   const [active, setActive] = useState('discussion')
+   const [active, setActive] = useState('Discussion')
    
     function postValue (e: MouseEvent<HTMLButtonElement>) {
         const value = e.target as HTMLButtonElement
@@ -13,7 +13,7 @@ export default function Post () {
         <>
         <div className="postForm">
             <div className="postType">
-           <label><button value='discussion' onClick={e => postValue(e)} className='share'>Discussion</button></label>
+           <label><button value='Discussion' onClick={e => postValue(e)} className='share'>Discussion</button></label>
            <label><button value='LFG' onClick={e => postValue(e)} className="share">LFG</button></label>
            </div>
            <PostType active={active} />

@@ -44,13 +44,13 @@ export default function PostType (props: {active: string}) {
         
         ,[loginInitials.id])
      const handleSubmit =  async (e: FormEvent<HTMLFormElement>) => {
-     
+     console.log(active)
         e.preventDefault()
-        if (active === 'discussionForm') {
+        if (active === 'Discussion') {
             setMedia('Discussion')
-        
+        console.log('handleSubmit')
     
-         await addDoc( collection(db, 'feed'), {
+          await addDoc( collection(db, 'feed'), {
                 user: user.username,
                 post_title: title,
                 post_content: text,
@@ -58,7 +58,8 @@ export default function PostType (props: {active: string}) {
                 comments: [],
                 date: theDate,
                 media_type: media
-            })
+         })
+          
         }
         else {
             await addDoc( collection(db, 'lfg'), {
@@ -73,7 +74,7 @@ export default function PostType (props: {active: string}) {
      }
     
 
-    if (active == "discussion")
+    if (active == "Discussion")
     {
         return (
         <div className="discussionForm">

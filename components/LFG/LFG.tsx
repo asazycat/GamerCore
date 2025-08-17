@@ -37,7 +37,7 @@ export default function LFG () {
         }) ()
     },[])
 
-    console.log(search)
+
 
     return (
         <>
